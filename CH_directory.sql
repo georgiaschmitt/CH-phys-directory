@@ -1171,4 +1171,3 @@ ALTER TABLE ONLY public.userfavorites
 --
 -- PostgreSQL database dump complete
 --
-

@@ -16,7 +16,7 @@ class User(db.Model):
     email = db.Column(db.String, unique=True)
     password = db.Column(db.String)
 
-    # favorites = a list of favorites objects for this user
+    favorites = db.relationship("Physician", secondary="favorites", backref="users")
 
     def __repr__(self):
         return f'<User user_id={self.user_id} email={self.email}>'
@@ -29,30 +29,12 @@ class Favorite(db.Model):
     fav_id = db.Column(db.Integer,
                         autoincrement=True,
                         primary_key=True)
-    physician_id = db.Column(db.Integer, db.ForeignKey('physicians.physician_id'))
-
-    users = db.relationship("User", secondary="userfavorites", backref="favorites")
-    physician = db.relationship('Physician', backref='Favorites')
-
-
-    def __repr__(self):
-        return f'<Favorite fav_id={self.fav_id} physician_id={self.physician_id}>'
-
-
-class UserFavorite(db.Model):
-    """A user-favorite."""
-
-    __tablename__ = 'userfavorites'
-
-    userfav_id = db.Column(db.Integer,
-                        autoincrement=True,
-                        primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
-    fav_id = db.Column(db.Integer, db.ForeignKey('favorites.fav_id'), nullable=False)
+    physician_id = db.Column(db.Integer, db.ForeignKey('physicians.physician_id'), nullable=False)
 
 
     def __repr__(self):
-        return f'<UserFavorite userfav_id={self.userfav_id} user_id={self.user_id} fav_id={self.fav_id}>'
+        return f'<Favorite fav_id={self.fav_id} user_id={self.user_id} phys_id={self.physician_id}>'
 
 
 
@@ -71,7 +53,7 @@ class Physician(db.Model):
     institution = db.relationship('Institution', backref='Physicians')
     city = db.relationship('City', backref='Physicians')
 
-    # Favorites = a list of Favorite objects
+    # Users = a list of User objects who have favorited this physician
 
     def __repr__(self):
         return f'<Physician physician_id={self.physician_id} name_id={self.name}>'

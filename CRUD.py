@@ -1,5 +1,5 @@
 """CRUD operations."""
-from model import db, User, UserFavorite, Favorite, City, Institution, Physician, connect_to_db
+from model import db, User, Favorite, City, Institution, Physician, connect_to_db
 
 
 def create_user(email, password):
@@ -10,11 +10,20 @@ def create_user(email, password):
     db.session.commit()
     return user
 
-def create_favorite(user, physician):
+def add_favorite(user, physician):
+    """Create and return a new favorite."""
+    
+    user.favorites.append(physician)
+    db.session.commit()
 
-    favorite = Favorite(physician)
+def create_physician(name, institution, city):
+    """Create and return a physician."""
 
+    physician = Physician(name=name, institution=institution, city=city)
 
+    db.session.add(physician)
+    db.session.commit()
+    return physician
 
 if __name__ == '__main__':
     from server import app

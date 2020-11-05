@@ -180,8 +180,8 @@ ALTER SEQUENCE public.physicians_physician_id_seq OWNED BY public.physicians.phy
 
 CREATE TABLE public.userfavorites (
     userfav_id integer NOT NULL,
-    user_id integer,
-    fav_id integer
+    user_id integer NOT NULL,
+    fav_id integer NOT NULL
 );
 
 
@@ -1171,3 +1171,4 @@ ALTER TABLE ONLY public.userfavorites
 --
 -- PostgreSQL database dump complete
 --
+

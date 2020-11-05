@@ -16,6 +16,7 @@ class User(db.Model):
     email = db.Column(db.String, unique=True)
     password = db.Column(db.String)
 
+    # favorites = a list of favorites objects for this user
 
     def __repr__(self):
         return f'<User user_id={self.user_id} email={self.email}>'

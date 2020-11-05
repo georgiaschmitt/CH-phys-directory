@@ -5,12 +5,14 @@ from model import db, User, UserFavorite, Favorite, City, Institution, Physician
 def create_user(email, password):
     """Create and return a new user."""
 
-    user = __blank__(email=__blank__, password=__blank__)
-
-    db.__blank__.__blank__(user)
-    db.__blank__.__blank__()
-
+    user = User(email=email, password=password)
+    db.session.add(user)
+    db.session.commit()
     return user
+
+def create_favorite(user, physician):
+
+    favorite = Favorite(physician)
 
 
 

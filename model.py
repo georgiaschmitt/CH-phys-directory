@@ -16,29 +16,9 @@ class User(db.Model):
     email = db.Column(db.String, unique=True)
     password = db.Column(db.String)
 
-    # UserFavorites = a list of UserFavorite objects
 
     def __repr__(self):
         return f'<User user_id={self.user_id} email={self.email}>'
-
-
-class UserFavorite(db.Model):
-    """A user-favorite."""
-
-    __tablename__ = 'userfavorites'
-
-    userfav_id = db.Column(db.Integer,
-                        autoincrement=True,
-                        primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
-    fav_id = db.Column(db.Integer, db.ForeignKey('favorites.fav_id'))
-
-    user = db.relationship('User', backref='UserFavorites')
-    favorite = db.relationship('Favorite', backref='UserFavorites')
-
-    def __repr__(self):
-        return f'<UserFavorite userfav_id={self.userfav_id} user_id={self.user_id} fav_id={self.fav_id}>'
-
 
 class Favorite(db.Model):
     """A favorite."""
@@ -50,12 +30,29 @@ class Favorite(db.Model):
                         primary_key=True)
     physician_id = db.Column(db.Integer, db.ForeignKey('physicians.physician_id'))
 
+    users = db.relationship("User", secondary="userfavorites", backref="favorites")
     physician = db.relationship('Physician', backref='Favorites')
 
-    # UserFavorites = a list of UserFavorite objects
 
     def __repr__(self):
         return f'<Favorite fav_id={self.fav_id} physician_id={self.physician_id}>'
+
+
+class UserFavorite(db.Model):
+    """A user-favorite."""
+
+    __tablename__ = 'userfavorites'
+
+    userfav_id = db.Column(db.Integer,
+                        autoincrement=True,
+                        primary_key=True)
+    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'), nullable=False)
+    fav_id = db.Column(db.Integer, db.ForeignKey('favorites.fav_id'), nullable=False)
+
+
+    def __repr__(self):
+        return f'<UserFavorite userfav_id={self.userfav_id} user_id={self.user_id} fav_id={self.fav_id}>'
+
 
 
 class Physician(db.Model):
@@ -130,11 +127,10 @@ def connect_to_db(flask_app, db_uri='postgresql:///CH', echo=True):
 
 
 if __name__ == '__main__':
-    from flask import Flask
+    from server import app
 
     # Call connect_to_db(app, echo=False) if your program output gets
     # too annoying; this will tell SQLAlchemy not to print out every
     # query it executes.
 
-    app = Flask(__name__)
     connect_to_db(app)

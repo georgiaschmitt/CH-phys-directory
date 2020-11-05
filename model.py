@@ -14,7 +14,7 @@ class User(db.Model):
                         autoincrement=True,
                         primary_key=True)
     email = db.Column(db.String, unique=True)
-    password = db.Column(db.String_)
+    password = db.Column(db.String)
 
     def __repr__(self):
         return f'<User user_id={self.user_id} email={self.email}>'
@@ -54,13 +54,40 @@ class Physician(db.Model):
     physician_id = db.Column(db.Integer,
                         autoincrement=True,
                         primary_key=True)
-    user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
-    fav_id = db.Column(db.Integer, db.ForeignKey('favs.fav_id'))
+    name = db.Column(db.String)
+    institution_id = db.Column(db.Integer, db.ForeignKey('institution.user_id'), nullable=True)
+    city_id = db.Column(db.Integer, db.ForeignKey('cities.cities_id'))
 
     def __repr__(self):
-        return f'<UserFave userfav_id={self.userfav_id} user_id={self.user_id} fav_id={self.fav_id}>'
+        return f'<Physician physician_id={self.physician_id} name_id={self.name}>'
 
+class Institution(db.Model):
+    """An institution."""
 
+    __tablename__ = 'institutions'
+
+    institution_id = db.Column(db.Integer,
+                        autoincrement=True,
+                        primary_key=True)
+    name = db.Column(db.String)
+    city_id = db.Column(db.Integer, db.ForeignKey('cities.cities_id'))
+
+    def __repr__(self):
+        return f'<Institution institution_id={self.institution_id} name={self.name}>'
+
+class City(db.Model):
+    """A city."""
+
+    __tablename__ = 'cities'
+
+    city_id = db.Column(db.Integer,
+                        autoincrement=True,
+                        primary_key=True)
+    name = db.Column(db.String)
+    coordinates = db.Column(db.String)
+
+    def __repr__(self):
+        return f'<City city_id={self.city_id} name={self.name}>'
 
 
 

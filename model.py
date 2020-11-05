@@ -38,7 +38,20 @@ class Favorite(db.Model):
 
     __tablename__ = 'favorites'
 
-    userfav_id = db.Column(db.Integer,
+    fav_id = db.Column(db.Integer,
+                        autoincrement=True,
+                        primary_key=True)
+    physician_id = db.Column(db.Integer, db.ForeignKey('physicians.physician_id'))
+
+    def __repr__(self):
+        return f'<Favorite fav_id={self.fav_id} physician_id={self.physician_id}>'
+
+class Physician(db.Model):
+    """A physician."""
+
+    __tablename__ = 'physicians'
+
+    physician_id = db.Column(db.Integer,
                         autoincrement=True,
                         primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
@@ -46,6 +59,7 @@ class Favorite(db.Model):
 
     def __repr__(self):
         return f'<UserFave userfav_id={self.userfav_id} user_id={self.user_id} fav_id={self.fav_id}>'
+
 
 
 

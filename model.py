@@ -21,6 +21,7 @@ class User(db.Model):
     def __repr__(self):
         return f'<User user_id={self.user_id} email={self.email}>'
 
+
 class UserFavorite(db.Model):
     """A user-favorite."""
 
@@ -30,14 +31,14 @@ class UserFavorite(db.Model):
                         autoincrement=True,
                         primary_key=True)
     user_id = db.Column(db.Integer, db.ForeignKey('users.user_id'))
-    fav_id = db.Column(db.Integer, db.ForeignKey('favs.fav_id'))
+    fav_id = db.Column(db.Integer, db.ForeignKey('favorites.fav_id'))
 
     user = db.relationship('User', backref='UserFavorites')
     favorite = db.relationship('Favorite', backref='UserFavorites')
 
-
     def __repr__(self):
         return f'<UserFavorite userfav_id={self.userfav_id} user_id={self.user_id} fav_id={self.fav_id}>'
+
 
 class Favorite(db.Model):
     """A favorite."""
@@ -56,6 +57,7 @@ class Favorite(db.Model):
     def __repr__(self):
         return f'<Favorite fav_id={self.fav_id} physician_id={self.physician_id}>'
 
+
 class Physician(db.Model):
     """A physician."""
 
@@ -65,8 +67,8 @@ class Physician(db.Model):
                         autoincrement=True,
                         primary_key=True)
     name = db.Column(db.String)
-    institution_id = db.Column(db.Integer, db.ForeignKey('institution.user_id'), nullable=True)
-    city_id = db.Column(db.Integer, db.ForeignKey('cities.cities_id'))
+    institution_id = db.Column(db.Integer, db.ForeignKey('institutions.institution_id'), nullable=True)
+    city_id = db.Column(db.Integer, db.ForeignKey('cities.city_id'))
 
     institution = db.relationship('Institution', backref='Physicians')
     city = db.relationship('City', backref='Physicians')
@@ -75,6 +77,7 @@ class Physician(db.Model):
 
     def __repr__(self):
         return f'<Physician physician_id={self.physician_id} name_id={self.name}>'
+
 
 class Institution(db.Model):
     """An institution."""
@@ -85,7 +88,7 @@ class Institution(db.Model):
                         autoincrement=True,
                         primary_key=True)
     name = db.Column(db.String)
-    city_id = db.Column(db.Integer, db.ForeignKey('cities.cities_id'))
+    city_id = db.Column(db.Integer, db.ForeignKey('cities.city_id'))
 
     city = db.relationship('City', backref='Institutions')
 
@@ -93,6 +96,7 @@ class Institution(db.Model):
 
     def __repr__(self):
         return f'<Institution institution_id={self.institution_id} name={self.name}>'
+
 
 class City(db.Model):
     """A city."""
@@ -103,12 +107,10 @@ class City(db.Model):
                         autoincrement=True,
                         primary_key=True)
     name = db.Column(db.String)
-    coordinates = db.Column(db.String)
+    coordinates = db.Column(db.Numeric(precision=20, scale=15))
     
     # Physicians = a list of Physician objects
     # Institutions = a list of Institution objects
-
-
 
     def __repr__(self):
         return f'<City city_id={self.city_id} name={self.name}>'
@@ -128,10 +130,11 @@ def connect_to_db(flask_app, db_uri='postgresql:///CH', echo=True):
 
 
 if __name__ == '__main__':
-    from server import app
+    from flask import Flask
 
     # Call connect_to_db(app, echo=False) if your program output gets
     # too annoying; this will tell SQLAlchemy not to print out every
     # query it executes.
-    db.create_all()
+
+    app = Flask(__name__)
     connect_to_db(app)

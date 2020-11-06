@@ -47,54 +47,33 @@ class Physician(db.Model):
                         autoincrement=True,
                         primary_key=True)
     name = db.Column(db.String)
-    institution_id = db.Column(db.Integer, db.ForeignKey('institutions.institution_id'), nullable=True)
-    city_id = db.Column(db.Integer, db.ForeignKey('cities.city_id'))
+    location_id = db.Column(db.Integer, db.ForeignKey('locations.location_id'))
 
-    institution = db.relationship('Institution', backref='Physicians')
-    city = db.relationship('City', backref='Physicians')
+    location = db.relationship('Location', backref='physicians')
 
     # Users = a list of User objects who have favorited this physician
 
     def __repr__(self):
-        return f'<Physician physician_id={self.physician_id} name_id={self.name}>'
+        return f'<Physician physician_id={self.physician_id} name={self.name}>'
 
 
-class Institution(db.Model):
-    """An institution."""
+class Location(db.Model):
+    """A location."""
 
-    __tablename__ = 'institutions'
+    __tablename__ = 'locations'
 
-    institution_id = db.Column(db.Integer,
+    location_id = db.Column(db.Integer,
                         autoincrement=True,
                         primary_key=True)
-    name = db.Column(db.String)
-    city_id = db.Column(db.Integer, db.ForeignKey('cities.city_id'))
-
-    city = db.relationship('City', backref='Institutions')
-
-    # Physicians = a list of Physician objects
-
-    def __repr__(self):
-        return f'<Institution institution_id={self.institution_id} name={self.name}>'
-
-
-class City(db.Model):
-    """A city."""
-
-    __tablename__ = 'cities'
-
-    city_id = db.Column(db.Integer,
-                        autoincrement=True,
-                        primary_key=True)
-    name = db.Column(db.String)
+    institution = db.Column(db.String)
+    city = db.Column(db.String)
+    state = db.Column(db.String)
     coordinates = db.Column(db.Numeric(precision=20, scale=15))
-    
-    # Physicians = a list of Physician objects
-    # Institutions = a list of Institution objects
+
+    # Physicians = a list of Physician objects belonging to this location
 
     def __repr__(self):
-        return f'<City city_id={self.city_id} name={self.name}>'
-
+        return f'<Location location_id={self.location_id} institution={self.institution} city={self.city}>'
 
 
 

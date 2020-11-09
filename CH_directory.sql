@@ -423,7 +423,7 @@ COPY public.locations (location_id, institution, city, state, coordinates) FROM 
 204	"Dallas Neurological Associates"	"Richardson"	"Texas"	34.953030000000000
 205	"East Texas Neurology "	"Tyler"	"Texas"	34.953030000000000
 206	"Beaver/Milford/Parowan Medical Clinics"	"Beaver"	"Utah"	34.953030000000000
-207	"Rocky Mountain Neurological Associates\n"	"Murray"	"Utah"	34.953030000000000
+207	"Rocky Mountain Neurological Associates"	"Murray"	"Utah"	34.953030000000000
 208	"University Health Neurology"	"Salt Lake City"	"Utah"	34.953030000000000
 209	"John A. Moran Eye Center"	"Salt Lake City"	"Utah"	34.953030000000000
 210	"Lifetree Clinical Research and Pain Clinic\n"	"Salt Lake City"	"Utah"	34.953030000000000
@@ -522,7 +522,7 @@ COPY public.physicians (physician_id, name, location_id) FROM stdin;
 56	"Dr. Ellis V. Hedaya"	54
 57	"Dr. Jerome M. Walker"	55
 58	"Dr. Kenneth J. Lazarus"	56
-59	"Dr. Micheal Todd Williamson\n"	57
+59	"Dr. Micheal Todd Williamson"	57
 60	"Dr. Robert G. Bashuk"	58
 61	"Dr. Karen Burgner (PCP)"	59
 62	"Diamond Doctors"	60
@@ -537,7 +537,7 @@ COPY public.physicians (physician_id, name, location_id) FROM stdin;
 71	"Dr. Kathryn A. Hanlon"	69
 72	"Dr.Larry Salberg"	69
 73	"Dr. Joseph F. Seipel"	70
-74	"Dr. Kelly Scott Bast (PCP)\n"	71
+74	"Dr. Kelly Scott Bast (PCP)"	71
 75	"Dr. Kurt Vander Ploeg (PCP)"	72
 76	"Dr. Christine M Boylan (PCP)"	73
 77	"Dr. Jay S. Zwibelman"	74
@@ -570,12 +570,12 @@ COPY public.physicians (physician_id, name, location_id) FROM stdin;
 104	"Dr. Michael T. Ku (PCP)"	101
 105	"Dr. Lionel Glass"	102
 106	"Dr. Jane M. Achenbach"	103
-107	"Dr. John Peers Robrock (PCP)\n"	104
+107	"Dr. John Peers Robrock (PCP)"	104
 108	"Dr. Michael P. Sethna"	105
 109	"Dr. Andrew Y. Chao (PCP)"	106
 110	"Dr. Brett D. Hosley"	107
 111	"Dr. Charles Weinstein"	108
-112	"Dr. Gustavo Adolfo Granada\n"	109
+112	"Dr. Gustavo Adolfo Granada"	109
 113	"Dr. Juan C. Escandon"	110
 114	"Ryan Doctors"	111
 115	"Dr. Scott M. Ehresman (PCP)"	112

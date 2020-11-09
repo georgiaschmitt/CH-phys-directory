@@ -7,18 +7,18 @@ import crud
 from jinja2 import StrictUndefined
 
 app = Flask(__name__)
-# app.secret_key = 'dev'
-# app.jinja_env.undefined = StrictUndefined
+app.secret_key = 'dev'
+app.jinja_env.undefined = StrictUndefined
 
 
-# @app.route("/")
-# def homepage():
-#     """View homepage."""
+@app.route("/")
+def homepage():
+    """View homepage."""
 
-#     if 'user_id' in session:
-#         return render_template("homepage.html")
-#     else:
-#         return render_template("login.html")
+    # if 'user_id' in session:
+        return render_template("homepage.html")
+    # else:
+        # return render_template("login.html")
 
 
 # @app.route("/movies")

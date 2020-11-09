@@ -67,7 +67,7 @@ def get_favorites_by_user(user):
 def get_favorites_by_physician(physician):
     """Return a list of users who have favorited a physician."""
     return physician.users
-
+ 
 def get_physician_by_city(city):
     """Return physician by city."""
     return Physician.query.filter(Physician.location.city == city).all()

@@ -15,19 +15,61 @@ app.jinja_env.undefined = StrictUndefined
 def homepage():
     """View homepage."""
 
-    # if 'user_id' in session:
+    if 'user_id' in session:
+        return render_template("user-homepage.html")
+    else:
         return render_template("homepage.html")
-    # else:
-        # return render_template("login.html")
+
+@app.route("/users", methods=['POST'])
+def register_user():
+    """Create a new user."""
+    email = request.form.get("email")
+    password = request.form.get("password")
+
+    if crud.get_user_by_email(email):
+        flash('There is already an account with that email, please try again!')
+    else:
+        crud.create_user(email, password)
+        flash('Account created! Please log in.')
+    return redirect("/")
+
+@app.route("/login")
+def user_login():
+    """Log a user in."""
+    email = request.args.get("login-email")
+    password = request.args.get("login-password")
+    if crud.password_match(email, password):
+        user = crud.get_user_by_email(email)
+        session['user_id'] = user.user_id
+        session['user_email'] = user.email
+        flash('Logged in!')
+    else:
+        flash('Username and password do not match, please try again!')
+    return redirect("/")
 
 
-# @app.route("/movies")
-# def all_movies():
-#     """View all movies."""
 
-#     movies = crud.get_all_movies()
+@app.route("/providers")
+def all_providers():
+    """View all providers."""
 
-#     return render_template("all_movies.html", movies=movies)
+    providers = crud.get_all_physicians()
+    return render_template("all_providers.html", providers=providers)
+
+@app.route("/providers/<provider_id>")
+def show_provider(provider_id):
+    """Show details on a provider."""
+    provider = crud.get_physician_by_id(provider_id)
+    return render_template('provider_details.html', provider=provider)
+
+@app.route("/favorites")
+def show_user_favorites():
+    """Show a user's favorites."""
+    if 'user_id' in session:
+        user = crud.get_user_by_id(session['user_id'])
+        return render_template("user_favorites.html", user=user)
+    else:
+        return redirect("/")
 
 
 if __name__ == '__main__':

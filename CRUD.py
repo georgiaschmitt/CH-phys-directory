@@ -60,13 +60,21 @@ def get_physician_by_name(name):
     """Return physicians by name."""
     return Physician.query.filter(Physician.name==name).all()
 
+def get_favorites_by_user(user):
+    """Return user's favorites."""
+    return user.favorites
+
+def get_favorites_by_physician(physician):
+    """Return a list of users who have favorited a physician."""
+    return physician.users
+
 def get_physician_by_city(city):
     """Return physician by city."""
     return Physician.query.filter(Physician.location.city == city).all()
 
 def get_physician_by_state(state):
     """Return physician by state."""
-    return Physician.query.filter(Physician.location.state = state).all()
+    return Physician.query.filter(Physician.location.state == state).all()
 
 def password_match(email, password):
     """Check if password matches email."""

@@ -75,6 +75,7 @@ def get_physicians_by_name(name):
     return Physician.query.filter(Physician.name.like(f'%{name}%')).all()
 
 
+
 def password_match(email, password):
     """Check if password matches email."""
     return User.query.filter(User.email == email, User.password==password).first()

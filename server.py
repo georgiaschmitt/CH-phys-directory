@@ -57,8 +57,9 @@ def search_by_state():
 
 @app.route("/search/name")
 def search_by_name():
+    """Search providers by name."""
     name = request.args.get('name')
-    providers = get_physician_by_name(name)
+    providers = crud.get_physician_by_name(name)
     return render_template('search_results.html', providers=providers)
 
 

@@ -44,7 +44,6 @@ def get_physician_by_id(physician_id):
     """Return physician by id."""
     return Physician.query.get(physician_id)
 
-
 def get_user_by_id(user_id):
     """Return user by id."""
     return User.query.get(user_id)
@@ -69,10 +68,10 @@ def get_physician_by_city(city):
     """Return physician by city."""
     return Physician.query.filter(Physician.location.city == city).all()
 
-def get_physician_by_state(state):
+def get_physician_by_state(state_query):
     """Return physician by state."""
-    locations = Location.query.filter(Location.state==state).all()
-    return locations
+    return Physician.query.filter(Physician.location.has(state = state_query)).all()
+
    
 
 

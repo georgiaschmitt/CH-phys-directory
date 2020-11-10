@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Cluster Headache Provider Directory Home{% endblock %}
+
+{% block body %}
+  <h1>Welcome !</h1>
+  You're logged in as {{ session['user_email'] }}.
+
+
+  <form action="/search/state">
+    <p>
+      Search providers by state <input type="text" name="state">
+    </p> 
+    <p>
+      <input type="submit">
+    </p>
+  </form><br>
+
+
+  <form action="/search/name">
+    <p>
+      Search providers by name <input type="text" name="name">
+    </p> 
+    <p>
+      <input type="submit">
+    </p>
+  </form>
+
+  <ul>
+    <li><a href="/providers">View all providers</a></li>
+    <li><a href="/favorites"</li> View your bookmarked providers</a></li>
+    <li><a href="/suggestion_form">Suggest a provider for the directory</a></li>
+  </ul>
+{% endblock %}

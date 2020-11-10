@@ -1,0 +1,17 @@
+{% extends 'base.html' %}
+
+{% block title %}{{ provider.name }} - Details{% endblock %}
+
+{% block body %}
+<h1>{{ provider.name }}</h1>
+
+<p>
+  {{ provider.location.institution }}<br>
+  {{ provider.location.city }}<br>
+  {{ provider.location.state }}
+</p>
+<br><br>
+<a href="/providers">Back to all providers</a>
+
+
+{% endblock %}

@@ -25,12 +25,12 @@ def create_physician(name, location):
     db.session.commit()
     return physician
 
-def add_favorite(user, physician):
-    """Create and return a new favorite."""
+# def add_favorite(user, physician):
+#     """Create and return a new favorite."""
     
-    user.favorites.append(physician)
-    db.session.commit()
-    return f"Added favorite: {physician}!"
+#     user.favorites.append(physician)
+#     db.session.commit()
+#     return f"Added favorite: {physician}!"
 
 def get_all_physicians():
     """Returns all physicians."""
@@ -52,28 +52,27 @@ def get_user_by_email(email):
     """Return user by email."""
     return User.query.filter(User.email == email).first()
 
-def get_physician_by_name(name):
-    """Return physicians by name."""
-    return Physician.query.filter(Physician.name.like('%name%')).all()
 
-def get_favorites_by_user(user):
-    """Return user's favorites."""
-    return user.favorites
 
-def get_favorites_by_physician(physician):
-    """Return a list of users who have favorited a physician."""
-    return physician.users
+# def get_favorites_by_user(user):
+#     """Return user's favorites."""
+#     return user.favorites
+
+# def get_favorites_by_physician(physician):
+#     """Return a list of users who have favorited a physician."""
+#     return physician.users
  
-def get_physician_by_city(city):
-    """Return physician by city."""
-    return Physician.query.filter(Physician.location.city == city).all()
+# def get_physician_by_city(city):
+#     """Return physician by city."""
+#     return Physician.query.filter(Physician.location.city == city).all()
 
-def get_physician_by_state(state_query):
+def get_physicians_by_state(state_query):
     """Return physician by state."""
     return Physician.query.filter(Physician.location.has(state = state_query)).all()
 
-   
-
+def get_physicians_by_name(name):
+    """Return physicians by name."""
+    return Physician.query.filter(Physician.name.like(f'%{name}%')).all()
 
 
 def password_match(email, password):

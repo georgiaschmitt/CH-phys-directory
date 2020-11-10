@@ -51,15 +51,15 @@ def user_login():
 def search_by_state():
     """Search providers by state."""
 
-    state = request.args.get('state')
-    providers = crud.get_physicians_by_state(state)
+    query_state = request.args.get('state')
+    providers = crud.get_physicians_by_state(query_state)
     return render_template('search_results.html', providers=providers)
 
 @app.route("/search/name")
 def search_by_name():
     """Search providers by name."""
     name = request.args.get('name')
-    providers = crud.get_physician_by_name(name)
+    providers = crud.get_physicians_by_name(name)
     return render_template('search_results.html', providers=providers)
 
 

@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Suggest a Provider{% endblock %}
+
+{% block body %}
+
+  <form action="/suggestion_submit" method="POST">
+    <p>
+      Name of Provider <input type="text" name="name">
+    </p>
+    <p>
+      Institution<input type="password" name="institution">
+    </p>
+    <p>
+      City <input type="text" name="city">
+      </p>
+      <p>
+      State<input type="text" name="state">
+      </p>
+    <p>
+      <input type="submit">
+    </p>
+  </form>
+
+
+
+  <ul>
+    <li><a href="/providers">Back to providers</a></li>
+    </ul>
+  
+{% endblock %}

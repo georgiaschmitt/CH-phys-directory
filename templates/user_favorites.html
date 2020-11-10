@@ -1,0 +1,15 @@
+{% extends 'base.html' %}
+
+{% block title %}Favorites for {{ user.email }}{% endblock %}
+
+{% block body %}
+<h1>Favorites</h1>
+
+<p>
+  {{ user.favorites }}<br>
+</p>
+<br><br>
+<a href="/providers">Back to all providers</a>
+
+
+{% endblock %}

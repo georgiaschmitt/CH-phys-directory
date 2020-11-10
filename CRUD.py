@@ -40,13 +40,10 @@ def get_all_users():
     """Returns all users."""
     return User.query.all()
 
-def get_all_locations():
-    """Returns all locations."""
-    return Location.query.all()
-
 def get_physician_by_id(physician_id):
     """Return physician by id."""
     return Physician.query.get(physician_id)
+
 
 def get_user_by_id(user_id):
     """Return user by id."""
@@ -58,7 +55,7 @@ def get_user_by_email(email):
 
 def get_physician_by_name(name):
     """Return physicians by name."""
-    return Physician.query.filter(Physician.name==name).all()
+    return Physician.query.filter(Physician.name.like('%name%')).all()
 
 def get_favorites_by_user(user):
     """Return user's favorites."""
@@ -74,7 +71,11 @@ def get_physician_by_city(city):
 
 def get_physician_by_state(state):
     """Return physician by state."""
-    return Physician.query.filter(Physician.location.state == state).all()
+    locations = Location.query.filter(Location.state==state).all()
+    return locations
+   
+
+
 
 def password_match(email, password):
     """Check if password matches email."""

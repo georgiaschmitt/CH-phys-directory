@@ -47,6 +47,19 @@ def user_login():
         flash('Username and password do not match, please try again!')
     return redirect("/")
 
+@app.route("/search/state")
+def search_by_state():
+    """Search providers by state."""
+
+    state = request.args.get('state')
+    providers = crud.get_physicians_by_state(state)
+    return render_template('search_results.html', providers=providers)
+
+@app.route("/search/name")
+def search_by_name():
+    name = request.args.get('name')
+    providers = get_physician_by_name(name)
+    return render_template('search_results.html', providers=providers)
 
 
 @app.route("/providers")
@@ -56,11 +69,25 @@ def all_providers():
     providers = crud.get_all_physicians()
     return render_template("all_providers.html", providers=providers)
 
+
 @app.route("/providers/<provider_id>")
 def show_provider(provider_id):
     """Show details on a provider."""
     provider = crud.get_physician_by_id(provider_id)
     return render_template('provider_details.html', provider=provider)
+
+@app.route("/suggestion_form")
+def suggest_provider():
+    return render_template('suggestion_form.html')
+
+@app.route("/suggestion_submit", methods=['POST'])
+def submit_suggestion():
+    name = request.form.get("name")
+    institution = request.form.get("institution")
+    city = request.form.get("city")
+    state = request.form.get("state")
+    flash('Your suggestion has been submitted! Thank you!')
+    return redirect("/")
 
 @app.route("/favorites")
 def show_user_favorites():

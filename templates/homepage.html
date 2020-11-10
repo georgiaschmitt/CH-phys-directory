@@ -5,6 +5,33 @@
 
 {% block body %}
   <h1>Welcome!</h1>
+  
+
+    <form action="/search/state">
+      <p>
+        Search providers by state <input type="text" name="state">
+      </p> 
+      <p>
+        <input type="submit">
+      </p>
+    </form><br>
+
+
+    <form action="/search/name">
+      <p>
+        Search providers by name <input type="text" name="name">
+      </p> 
+      <p>
+        <input type="submit">
+      </p>
+    </form>
+  <ul>
+    <li><a href="/providers">View all providers</a></li>
+    <li><a href="/suggestion_form">Suggest a provider for the directory</a></li>
+
+  </ul>
+
+
 
   <h2> Create an Account</h2>
   <form action="/users" method="POST">
@@ -31,8 +58,5 @@
     </p>
   </form>
 
-  <h2>Navigation</h2>
-  <ul>
-    <li><a href="/providers">View all providers</a></li>
-  </ul>
+  
 {% endblock %}

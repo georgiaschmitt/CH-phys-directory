@@ -3,21 +3,38 @@
   <head>
     <meta charset="utf-8">
     <meta name="viewport" content="width=device-width">
-    <title>
-      {% block title %}{% endblock %}
+    <title>CH Directory
     </title>
+    <script async defer 
+    src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmekBy-tOKe3uQr7priiJ7te4a_nLSUV0&callback=initMap&libraries=&v=weekly">
+  </script>
+    
+    <link rel="stylesheet" href="/static/styles.css">
+    <script
+      src="http://code.jquery.com/jquery-3.5.1.js"
+      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+      crossorigin="anonymous"></script>
+    
 
-    {% block head %}{% endblock %}
-  </head>
+      
+    </head>
+
+  
   <body>
 
-    {% for msg in get_flashed_messages() %}
+ 
+
+  {% for msg in get_flashed_messages() %}
     <p class="flash-msg">
       {{ msg }}
     </p>
   {% endfor %}
-    {% block body %}{% endblock %}
+  
+  
+  {% block body %}{% endblock %}
 
-    {% block after_body %}{% endblock %}
+  {% block after_body %}{% endblock %}
+
+  <script src="/static/directory.js"></script>
   </body>
 </html>

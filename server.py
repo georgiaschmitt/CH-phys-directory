@@ -98,6 +98,7 @@ def show_user_favorites():
         return render_template("user_favorites.html", user=user)
     else:
         return redirect("/")
+        # grey out the favorites button??
 
 
 if __name__ == '__main__':

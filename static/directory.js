@@ -32,13 +32,6 @@ function initMap() {
 
 
 
-    $.get('https://maps.googleapis.com/maps/api/place/findplacefromtext/json?input=Mayo%20Clinic%20Rochester&inputtype=textquery&fields=formatted_address,name,geometry&key=AIzaSyAmekBy-tOKe3uQr7priiJ7te4a_nLSUV0', (data) => {
-
-        console.log(data)
-
-    }
-
-
 // $.get('https://pokeapi.co/api/v2/berry?limit=20', (data) => {
 
 //     for (const berry in data.results) {

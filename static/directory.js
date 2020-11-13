@@ -31,10 +31,12 @@ function initMap() {
     }
 
 
+$.get('/api/locations', (locations) => {
+        for (const loc of locations) {
 
-// $.get('https://pokeapi.co/api/v2/berry?limit=20', (data) => {
+
 
 //     for (const berry in data.results) {
 //         $('#berries').append(`${data.results[berry].name}<br>`);
 //     }
-// });
+// })

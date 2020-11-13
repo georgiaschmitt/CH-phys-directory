@@ -47,6 +47,24 @@ def user_login():
         flash('Username and password do not match, please try again!')
     return redirect("/")
 
+@app.route("/api/locations")
+def location_info():
+    """JSON information about provider locations."""
+
+    locations = [
+        {
+            "id": location.location_id,
+            "institution": location.institution,
+            "city": location.city,
+            "state": location.state,
+            "lat": location.lat,
+            "lng": location.lng,
+        }
+        for location in Location.query.all()
+    ]
+    return jsonify(locations)
+
+
 @app.route("/search/state")
 def search_by_state():
     """Search providers by state."""

@@ -68,7 +68,8 @@ class Location(db.Model):
     institution = db.Column(db.String)
     city = db.Column(db.String)
     state = db.Column(db.String)
-    coordinates = db.Column(db.Numeric(precision=20, scale=15))
+    lat = db.Column(db.Numeric(precision=20, scale=15))
+    lng = db.Column(db.Numeric(precision=20, scale=15))
 
     # Physicians = a list of Physician objects belonging to this location
 

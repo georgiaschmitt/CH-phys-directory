@@ -30,8 +30,10 @@ function initMap() {
    
     $.get('/api/locations', (locations) => {
         for (const loc of locations) {
+
             const locationInfoContent = (`
                 <div class="window-content">
+                    ${loc.id}<br>
                     <b>${loc.providers}</b><br>
                     ${loc.institution}<br>
                     ${loc.city}, ${loc.state}</li>

@@ -1,6 +1,6 @@
 """Server for Cluster Headache Provider Directory app."""
 
-from flask import (Flask, render_template, request, flash, session,
+from flask import (Flask, render_template, jsonify, request, flash, session,
                    redirect)
 from model import connect_to_db
 import crud
@@ -54,15 +54,16 @@ def location_info():
     locations = [
         {
             "id": location.location_id,
-            "providers": location.physicians,
+            "providers": crud.get_physician_name_by_location(location),
             "institution": location.institution,
             "city": location.city,
             "state": location.state,
-            "lat": location.lat,
-            "lng": location.lng,
+            "lat": float(location.lat),
+            "lng": float(location.lng),
         }
         for location in crud.get_all_locations()
     ]
+    print(locations)
     return jsonify(locations)
 
 

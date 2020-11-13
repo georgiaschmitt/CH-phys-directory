@@ -32,11 +32,9 @@ function initMap() {
         for (const loc of locations) {
             const locationInfoContent = (`
                 <div class="window-content">
-                    <ul class="location-info">
-                        <li><br>${loc.physicians}</li>
-                        <li><b>${loc.institution}</li>
-                        <li><b>${loc.city}, ${loc.state}</li>
-                    </ul>
+                    <b>${loc.providers}</b><br>
+                    ${loc.institution}<br>
+                    ${loc.city}, ${loc.state}</li>
                 </div>
             `);
             const locationMarker = new google.maps.Marker({

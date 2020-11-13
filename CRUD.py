@@ -66,9 +66,18 @@ def get_user_by_email(email):
 #     """Return a list of users who have favorited a physician."""
 #     return physician.users
  
-# def get_physician_by_city(city):
-#     """Return physician by city."""
-#     return Physician.query.filter(Physician.location.city == city).all()
+def get_physician_by_location(location):
+    """Return physicians by location."""
+    return Physician.query.filter(Physician.location == location).all()
+
+def get_physician_name_by_location(location):
+    """Return physicians' names by location."""
+    names = []
+    for physician in get_physician_by_location(location):
+        name = physician.name
+        names.append(name)
+    return names
+
 
 def get_physicians_by_state(state_query):
     """Return physician by state."""

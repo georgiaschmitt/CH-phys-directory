@@ -54,13 +54,14 @@ def location_info():
     locations = [
         {
             "id": location.location_id,
+            "providers": location.physicians,
             "institution": location.institution,
             "city": location.city,
             "state": location.state,
             "lat": location.lat,
             "lng": location.lng,
         }
-        for location in Location.query.all()
+        for location in crud.get_all_locations()
     ]
     return jsonify(locations)
 

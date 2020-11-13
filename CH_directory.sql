@@ -218,245 +218,245 @@ COPY public.favorites (fav_id, user_id, physician_id) FROM stdin;
 --
 
 COPY public.locations (location_id, institution, city, state, lat, lng) FROM stdin;
-1	Anniston Neurology & Headache Management Center	Anniston	Alabama	\N	\N
-2	Crown  Comprehensive Headache Center Inc	Huntsville	Alabama	\N	\N
-3	\N	Anchorage	Alaska	\N	\N
-4	\N	Mesa	Arizona	\N	\N
-5	Southwest Pain Management Associates	Phoenix	Arizona	\N	\N
-6	Barrow Neurological Institute	Phoenix	Arizona	\N	\N
-7	\N	Phoenix	Arizona	\N	\N
-8	Four Peaks Neurology	Scottsdale	Arizona	\N	\N
-9	\N	Scottsdale	Arizona	\N	\N
-10	\N	Tempe	Arizona	\N	\N
-11	FirstCare Fayetteville North	Fayetteville	Arkansas	\N	\N
-12	Southwest Neurological Institute	Fort Smith	Arkansas	\N	\N
-13	Sparks Neurology Center	Fort Smith	Arkansas	\N	\N
-14	Summit Medical Center - Cornerstone Clinic	Van Buren	Arkansas	\N	\N
-15	Fullerton Neurology and Headache	Fullerton	California	\N	\N
-16	\N	La Mesa	California	\N	\N
-17	\N	La Mesa	California	\N	\N
-18	UCLA Medical System	Los Angeles	California	\N	\N
-19	Cedars-Sinai	Los Angeles	California	\N	\N
-20	\N	Los Angeles	California	\N	\N
-21	David Geffen School of Medicine at UCLA	Los Angeles	California	\N	\N
-22	Northern California Headache Clinic	Mountain View 	California	\N	\N
-23	Newport Beach Neurologists	Newport Beach	California	\N	\N
-24	\N	Sacramento	California	\N	\N
-25	Kaiser Permanente	Sacramento	California	\N	\N
-26	Lassen Medical Center	Red Bluff	California	\N	\N
-27	\N	Redding	California	\N	\N
-28	University of California San Francisco - Headache Center	San Francisco	California	\N	\N
-29	San Francisco Headache Clinic 	San Francisco	California	\N	\N
-30	UUCSFMC Neurology Clinic	San Francisco	California	\N	\N
-31	\N	San Ramon	California	\N	\N
-32	\N	San Ramon	California	\N	\N
-33	\N	Santa Ana	California	\N	\N
-34	\N	Santa Monica	California	\N	\N
-35	Stanford School of Medicine Headache Clinic	Stanford	California	\N	\N
-36	Alpine Neurology	Centennial	Colorado	\N	\N
-37	Blue Sky Neurology	Denver	Colorado	\N	\N
-38	Summit Headache and Neurologic Institute	Englewood	Colorado	\N	\N
-39	\N	Loveland	Colorado	\N	\N
-40	Neurologic Associates	Bristol	Connecticut	\N	\N
-41	The Hartford Headache Center	East Hartford	Connecticut	\N	\N
-42	Neurological Specialists	Shelton	Connecticut	\N	\N
-43	Neurosurgical Associates	Newark	Delaware	\N	\N
-44	\N	Altamonte Springs	Florida	\N	\N
-45	\N	Davie	Florida	\N	\N
-46	\N	Jacksonville	Florida	\N	\N
-47	Neurologic Center of South Florida	Miami	Florida	\N	\N
-48	Ryan Wheeler Headache Treatment Center	Miami	Florida	\N	\N
-49	\N	Pensacola	Florida	\N	\N
-50	Sunrise Medical Group	Pompano Beach	Florida	\N	\N
-51	Family Practice of Saint Cloud	Saint Cloud	Florida	\N	\N
-52	Espat and Rose	Sebastian	Florida	\N	\N
-53	\N	Venice	Florida	\N	\N
-54	Peachtree Neurological Clinic	Atlanta	Georgia	\N	\N
-55	\N	Decatur	Georgia	\N	\N
-56	Southern Crescent Neurological Clinic	Fayetteville	Georgia	\N	\N
-57	North Georgia Neurological Clinic	Lawrenceville	Georgia	\N	\N
-58	Northwest Neurology	Marietta	Georgia	\N	\N
-59	Dreyer Medical Clinic 	Aurora	Illinois	\N	\N
-60	Diamond Headache Clinic	Chicago	Illinois	\N	\N
-61	University Neurologists	Chicago	Illinois	\N	\N
-62	\N	Chicago	Illinois	\N	\N
-63	NorthShore - Glenbrook Hospital	Glenview	Illinois	\N	\N
-64	North Suburban Wellness 	Highland Park	Illinois	\N	\N
-65	Robbins Headache Clinic	Northbrook	Illinois	\N	\N
-66	SwedishAmerican Neuro and Headache Center	Rockford	Illinois	\N	\N
-67	Indiana Clinic Neurology	Indianapolis	Indiana	\N	\N
-68	\N	Indianapolis	Indiana	\N	\N
-69	Northern Indiana Neurological	Merrillville	Indiana	\N	\N
-70	\N	New Albany	Indiana	\N	\N
-71	Mercy Johnston Medical Clinic	Johnston	Iowa	\N	\N
-72	\N	Pella	Iowa	\N	\N
-73	\N	Leawood	Kansas	\N	\N
-74	\N	Olathe	Kansas	\N	\N
-75	Quivira Internal Medicine	Overland Park	Kansas	\N	\N
-76	Wichita Clinic	Wichita	Kansas	\N	\N
-77	Neurology Consultants Of Kansas 	Wichita	Kansas	\N	\N
-78	Neuroscience Associates of Northern Kentucky	Crestview Hills	Kentucky	\N	\N
-79	MultiCare	Madisonville	Kentucky	\N	\N
-80	\N	Baton Rouge	Louisiana	\N	\N
-81	\N	Covington	Louisiana	\N	\N
-82	\N	Lafayette	Louisiana	\N	\N
-83	\N	Metairie	Louisiana	\N	\N
-84	\N	New Iberia	Louisiana	\N	\N
-85	Pediatric Associates of Lewiston	Lewiston	Maine	\N	\N
-86	Mid Maryland Neurology	Frederick	Maryland	\N	\N
-87	Mid-Atlantic Headache Institute 	Pikesville	Maryland	\N	\N
-88	\N	Towson	Maryland	\N	\N
-89	Brigham and Women's/Faulkner Neurology 	Boston	Massachusetts	\N	\N
-90	Massachusetts General Hospital 	Boston	Massachusetts	\N	\N
-91	New England Neurological Associates	Lawrence	Massachusetts	\N	\N
-92	Beth Israel Deaconess Healthcare- Medical Care Center 	Lexington	Massachusetts	\N	\N
-93	\N	North Easton	Massachusetts	\N	\N
-94	\N	Norwood	Massachusetts	\N	\N
-95	\N	Weymouth	Massachusetts	\N	\N
-96	Michigan Headache & Neurological Institute	Ann Arbor	Michigan	\N	\N
-97	Greater Ann Arbor Neurology	Ann Arbor	Michigan	\N	\N
-98	University of Michigan Health System	Ann Arbor	Michigan	\N	\N
-99	South Kent Family Care	Kentwood	Michigan	\N	\N
-100	\N	Lansing	Michigan	\N	\N
-101	Promed Family Practice	Portage	Michigan	\N	\N
-102	St. Joseph Mercy Oakland 	Pontiac	Michigan	\N	\N
-103	CCambridge Medical Center	Cambridge	Minnesota	\N	\N
-104	Park Nicollet Clinic—Eagan 	Eagan	Minnesota	\N	\N
-105	Noran Neurological Clinic	Maplewood	Minnesota	\N	\N
-106	\N	Ballwin	Missouri	\N	\N
-107	Hannibal Clinic	Hannibal	Missouri	\N	\N
-108	Neurological Consultants of Kansas City	Kansas City	Missouri	\N	\N
-109	\N	Kennett	Missouri	\N	\N
-110	\N	St. Louis	Missouri	\N	\N
-111	Ryan Headache Center	St. Louis	Missouri	\N	\N
-112	Family Medical Specialties	Holdrege	Nebraska	\N	\N
-113	East Lincoln Internal Medicine	Lincoln	Nebraska	\N	\N
-114	Renown Health	Reno	Nevada	\N	\N
-115	Northern Nevada Medical Center	Sparks	Nevada	\N	\N
-116	\N	Concord	New Hampshire	\N	\N
-117	Laconia Clinic	Laconia	New Hampshire	\N	\N
-118	\N	Bloomfield	New Jersey	\N	\N
-119	Edison Neurologic Associates	Edison	New Jersey	\N	\N
-120	\N	Emerson	New Jersey	\N	\N
-121	\N	Kearny	New Jersey	\N	\N
-122	Coastal Physicians & Surgeons	Somers Point	New Jersey	\N	\N
-123	UMDNJ - University Headache Center 	Stafford	New Jersey	\N	\N
-124	Vigman & Pollock	Summit	New Jersey	\N	\N
-125	Neurology & Neurophysiology Associates of NJ	Turnersville	New Jersey	\N	\N
-126	White Mountain Neurology	Alamogordo	New Mexico	\N	\N
-127	University of New Mexico - Clinic Neuroscience Center	Albuquerque	New Mexico	\N	\N
-128	Presbyterian Medical Group - Northside 	Albuquerque	New Mexico	\N	\N
-129	\N	Capitan	New Mexico	\N	\N
-130	South Shore Neurologic Associates	Bay Shore	New York	\N	\N
-131	Regional Neurological Associates	Bronx	New York	\N	\N
-132	Montefiore Medical Center 	Bronx	New York	\N	\N
-133	\N	Bronx	New York	\N	\N
-134	FamilyCare Medical Group – Neurological Division 	Camillus	New York	\N	\N
-135	Ontario Neurology Associates	Canandaigua	New York	\N	\N
-136	Five Towns Neurology	Cedarhurst	New York	\N	\N
-137	Mount Sinai Center for Headache and Pain Medicine 	New York	New York	\N	\N
-138	New York Headache Center	New York	New York	\N	\N
-139	The Headache Institute St. Luke's Hospital	New York	New York	\N	\N
-140	\N	Owego	New York	\N	\N
-141	Pain Symptom Management Center	Rochester	New York	\N	\N
-142	Greater Rochester Neurological	Rochester	New York	\N	\N
-143	Schenectady Neurological Consultants and the Headache Center of Northeastern NY	Schenectady	New York	\N	\N
-144	\N	Stony Brook	New York	\N	\N
-145	Neurologic Consultants of Westchester	White Plains	New York	\N	\N
-146	Kinkel Neurologic Center	Williamsville	New York	\N	\N
-147	Blue Ridge Headache Center	Asheville	North Carolina	\N	\N
-148	Carolina Headache Institute	Chapel Hill	North Carolina	\N	\N
-149	Mountain Medical Associates	Clyde	North Carolina	\N	\N
-150	Duke Health Center at Morreene Road	Durham	North Carolina	\N	\N
-151	Carolinas Headache Clinic	Matthews	North Carolina	\N	\N
-152	Raleigh Neurology 	Raleigh	North Carolina	\N	\N
-153	Boice-Willis Clinic	Rocky Mount	North Carolina	\N	\N
-154	Triad Neurological Associates	Winston-Salem	North Carolina	\N	\N
-155	University of Cincinnati Physicians	Cincinnati	Ohio	\N	\N
-156	Cleveland Clinic - Neurological Center for Pain	Cleveland	Ohio	\N	\N
-157	Cleveland Neurological Center	Cleveland	Ohio	\N	\N
-158	OrthoNeuro	Columbus	Ohio	\N	\N
-159	Grove City Family Health	Grove City	Ohio	\N	\N
-160	ExpressMed	Hilliard	Ohio	\N	\N
-161	OSU Family Medicine at CarePoint Lewis Center Primary Care	Lewis Center	Ohio	\N	\N
-162	\N	Westlake	Oklahoma	\N	\N
-163	Tulsa Neurology Clinic	Tulsa	Oklahoma	\N	\N
-164	OMNI Medical Group	Tulsa	Oklahoma	\N	\N
-165	The Corvallis Clinic at Waverly Drive	Albany	Oregon	\N	\N
-166	Samaritan Pacific Internal Medicine 	Newport	Oregon	\N	\N
-167	Headache and Neurologic Center of Philadelphia	Bala Cynwyd	Pennsylvania	\N	\N
-168	Geisinger Health System 	Danville	Pennsylvania	\N	\N
-169	\N	Doylestown	Pennsylvania	\N	\N
-170	Gumm Family Practice	Greensburg	Pennsylvania	\N	\N
-171	Penn State Hershey Neurology	Hershey	Pennsylvania	\N	\N
-172	\N	Jeannette	Pennsylvania	\N	\N
-173	Meadowbrook Neurology Group	Meadowbrook	Pennsylvania	\N	\N
-174	\N	Philadelphia	Pennsylvania	\N	\N
-175	Jefferson Headache Center	Philadelphia	Pennsylvania	\N	\N
-176	UPMC Headache Center	Pittsburgh	Pennsylvania	\N	\N
-177	Associates in Neurology of Pittsburgh	Pittsburgh	Pennsylvania	\N	\N
-178	Swarthmore Neurology Associates	Ridley Park 	Pennsylvania	\N	\N
-179	South Hampton Family Practice	Columbia	South Carolina	\N	\N
-180	Neurological Medicine	Clarksville	Tennessee	\N	\N
-181	\N	Germantown	Tennessee	\N	\N
-182	Semmes-Murphey Neurologic & Spine Institute	Memphis	Tennessee	\N	\N
-183	Nashville Neuroscience Group	Nashville	Tennessee	\N	\N
-184	Erlanger Ooltewah FamilyMedicine	Ooltewah	Tennessee	\N	\N
-185	\N	Abilene	Texas	\N	\N
-186	Associated Neurological Specialties 	Austin	Texas	\N	\N
-187	Austin Pain Associates 	Austin	Texas	\N	\N
-188	Headache & Pain Center	Austin	Texas	\N	\N
-189	Austin Headache Clinic 	Austin	Texas	\N	\N
-190	\N	Austin	Texas	\N	\N
-191	\N	Conroe	Texas	\N	\N
-192	Sadler Clinic	Conroe	Texas	\N	\N
-193	Dallas Headache Clinic	Dallas	Texas	\N	\N
-194	Texas Neurology 	Dallas	Texas	\N	\N
-195	Anodyne Headache and PainCare	Dallas	Texas	\N	\N
-196	\N	Fort Worth	Texas	\N	\N
-197	Hugman-Kent Clinic	Gladewater	Texas	\N	\N
-198	Methodist Neurological Institute	Houston	Texas	\N	\N
-199	Memorial Neurological Association 	Houston	Texas	\N	\N
-200	Houston Neurology Associates	Houston	Texas	\N	\N
-201	Houston Headache Clinic	Houston	Texas	\N	\N
-202	Diagnostic Clinic of Longview	Longview	Texas	\N	\N
-203	Houston Neurological Institute - Pasadena	Pasadena	Texas	\N	\N
-204	Dallas Neurological Associates	Richardson	Texas	\N	\N
-205	East Texas Neurology 	Tyler	Texas	\N	\N
-206	Beaver/Milford/Parowan Medical Clinics	Beaver	Utah	\N	\N
-207	Rocky Mountain Neurological Associates	Murray	Utah	\N	\N
-208	University Health Neurology	Salt Lake City	Utah	\N	\N
-209	John A. Moran Eye Center	Salt Lake City	Utah	\N	\N
-210	Lifetree Clinical Research and Pain Clinic	Salt Lake City	Utah	\N	\N
-211	Canyon View Medical Group	Spanish Fork	Utah	\N	\N
-212	University of Vermont Medical Group at Fletcher Allen	Burlington	Vermont	\N	\N
-213	\N	Rutland	Vermont	\N	\N
-214	Neurology & Headache Treatment Center 	Alexandria	Virginia	\N	\N
-215	University of Virginia Health System	Charlottesville	Virginia	\N	\N
-216	Neurology Services of Southwest VA	Blacksburg	Virginia	\N	\N
-217	Neurological Associates Inc	Richmond	Virginia	\N	\N
-218	Holland Road Family Medicine	Virginia Beach	Virginia	\N	\N
-219	Prince William Neurology Inc 	Woodbridge	Virginia	\N	\N
-220	\N	Issaquah	Washington	\N	\N
-221	Neurology Headache and Multiple Sclerosis Clinic at UWMC	Seattle	Washington	\N	\N
-222	Krischner Gordon and Erlich Mds	Seattle	Washington	\N	\N
-223	UW Neurology Clinic	Madison	Wisconsin	\N	\N
-224	Aurora Health Center	Manitowoc	Wisconsin	\N	\N
-225	Columbia St. Mary's	Milwaukee	Wisconsin	\N	\N
-226	\N	Stevens Point	Wisconsin	\N	\N
-227	Klasinski Clinic 	Stevens Point	Wisconsin	\N	\N
-228	\N	Calgary	Alberta	\N	\N
-229	\N	Calgary	Alberta	\N	\N
-230	\N	Edmonton	Alberta	\N	\N
-231	\N	Vancouver	British Columbia	\N	\N
-232	\N	Winnipeg	Manitoba	\N	\N
-233	\N	Huntsville	Ontario	\N	\N
-234	\N	Ottawa	Ontario	\N	\N
-235	\N	Ottawa	Ontario	\N	\N
-236	\N	Toronto	Ontario	\N	\N
-237	Montreal Migraine Clinic 	Montreal	Quebec	\N	\N
-238	\N	Trois-Rivières	Quebec	\N	\N
-239	\N	Saskatoon	Saskatchewan	\N	\N
+3	\N	Anchorage	Alaska	43.034558600000000	-89.429237399999990
+4	\N	Mesa	Arizona	43.034558600000000	-89.429237399999990
+5	Southwest Pain Management Associates	Phoenix	Arizona	33.622581400000000	-112.030166600000000
+6	Barrow Neurological Institute	Phoenix	Arizona	33.482026200000000	-112.079142600000000
+7	\N	Phoenix	Arizona	43.034558600000000	-89.429237399999990
+9	\N	Scottsdale	Arizona	43.034558600000000	-89.429237399999990
+10	\N	Tempe	Arizona	43.034558600000000	-89.429237399999990
+11	FirstCare Fayetteville North	Fayetteville	Arkansas	36.111842200000000	-94.143452799999990
+13	Sparks Neurology Center	Fort Smith	Arkansas	35.379996200000000	-94.416543199999990
+14	Summit Medical Center - Cornerstone Clinic	Van Buren	Arkansas	43.163690600000000	-89.260017100000000
+15	Fullerton Neurology and Headache	Fullerton	California	33.892504000000000	-117.929969000000000
+16	\N	La Mesa	California	43.034558600000000	-89.429237399999990
+18	UCLA Medical System	Los Angeles	California	34.054178700000000	-118.463199400000000
+19	Cedars-Sinai	Los Angeles	California	34.075395400000000	-118.380255900000000
+22	Northern California Headache Clinic	Mountain View 	California	37.367037800000000	-122.083788900000000
+23	Newport Beach Neurologists	Newport Beach	California	33.658743600000000	-117.864705100000000
+24	\N	Sacramento	California	43.034558600000000	-89.429237399999990
+25	Kaiser Permanente	Sacramento	California	43.070426000000000	-89.523996000000000
+26	Lassen Medical Center	Red Bluff	California	40.149402100000000	-122.222295100000000
+27	\N	Redding	California	43.034558600000000	-89.429237399999990
+29	San Francisco Headache Clinic 	San Francisco	California	37.784466500000000	-122.440442500000000
+30	UUCSFMC Neurology Clinic	San Francisco	California	37.774929500000000	-122.419415500000000
+31	\N	San Ramon	California	43.034558600000000	-89.429237399999990
+32	\N	San Ramon	California	43.034558600000000	-89.429237399999990
+33	\N	Santa Ana	California	43.034558600000000	-89.429237399999990
+34	\N	Santa Monica	California	43.034558600000000	-89.429237399999990
+36	Alpine Neurology	Centennial	Colorado	39.594395899999990	-104.835212200000000
+37	Blue Sky Neurology	Denver	Colorado	39.732441100000000	-104.932179100000000
+39	\N	Loveland	Colorado	43.034558600000000	-89.429237399999990
+40	Neurologic Associates	Bristol	Connecticut	43.023912600000000	-88.239732100000000
+41	The Hartford Headache Center	East Hartford	Connecticut	41.759613400000000	-72.739732899999990
+42	Neurological Specialists	Shelton	Connecticut	41.802079600000000	-87.934759000000000
+43	Neurosurgical Associates	Newark	Delaware	42.990540000000000	-87.951011000000000
+45	\N	Davie	Florida	43.034558600000000	-89.429237399999990
+46	\N	Jacksonville	Florida	43.034558600000000	-89.429237399999990
+48	Ryan Wheeler Headache Treatment Center	Miami	Florida	25.761679800000000	-80.191790200000000
+49	\N	Pensacola	Florida	43.034558600000000	-89.429237399999990
+50	Sunrise Medical Group	Pompano Beach	Florida	42.781083600000000	-78.781223500000000
+52	Espat and Rose	Sebastian	Florida	27.847448200000000	-80.488484399999990
+53	\N	Venice	Florida	43.034558600000000	-89.429237399999990
+54	Peachtree Neurological Clinic	Atlanta	Georgia	33.841899300000000	-84.426539499999990
+55	\N	Decatur	Georgia	43.034558600000000	-89.429237399999990
+57	North Georgia Neurological Clinic	Lawrenceville	Georgia	33.964291000000000	-84.010952000000000
+58	Northwest Neurology	Marietta	Georgia	42.187678299999990	-88.183097800000000
+59	Dreyer Medical Clinic 	Aurora	Illinois	41.793560500000000	-88.368044400000000
+60	Diamond Headache Clinic	Chicago	Illinois	41.907982300000000	-87.648743200000010
+62	\N	Chicago	Illinois	43.034558600000000	-89.429237399999990
+63	NorthShore - Glenbrook Hospital	Glenview	Illinois	42.092669200000000	-87.854443400000000
+65	Robbins Headache Clinic	Northbrook	Illinois	42.154100199999990	-87.892021700000000
+66	SwedishAmerican Neuro and Headache Center	Rockford	Illinois	42.265290000000000	-89.074075000000000
+67	Indiana Clinic Neurology	Indianapolis	Indiana	39.775496100000000	-86.176618400000000
+68	\N	Indianapolis	Indiana	43.034558600000000	-89.429237399999990
+70	\N	New Albany	Indiana	43.034558600000000	-89.429237399999990
+71	Mercy Johnston Medical Clinic	Johnston	Iowa	41.662261900000000	-93.735019700000000
+72	\N	Pella	Iowa	43.034558600000000	-89.429237399999990
+73	\N	Leawood	Kansas	43.034558600000000	-89.429237399999990
+76	Wichita Clinic	Wichita	Kansas	37.722246299999990	-97.229800799999990
+77	Neurology Consultants Of Kansas 	Wichita	Kansas	37.721490300000000	-97.198371999999990
+79	MultiCare	Madisonville	Kentucky	37.328100500000010	-87.498888200000000
+80	\N	Baton Rouge	Louisiana	43.034558600000000	-89.429237399999990
+81	\N	Covington	Louisiana	43.034558600000000	-89.429237399999990
+82	\N	Lafayette	Louisiana	43.034558600000000	-89.429237399999990
+83	\N	Metairie	Louisiana	43.034558600000000	-89.429237399999990
+84	\N	New Iberia	Louisiana	43.034558600000000	-89.429237399999990
+86	Mid Maryland Neurology	Frederick	Maryland	39.442043000000000	-77.405222999999990
+87	Mid-Atlantic Headache Institute 	Pikesville	Maryland	39.386464400000000	-76.734670800000000
+88	\N	Towson	Maryland	43.034558600000000	-89.429237399999990
+90	Massachusetts General Hospital 	Boston	Massachusetts	42.362610900000000	-71.067566000000000
+91	New England Neurological Associates	Lawrence	Massachusetts	42.642097000000010	-71.305702300000010
+93	\N	North Easton	Massachusetts	43.034558600000000	-89.429237399999990
+94	\N	Norwood	Massachusetts	43.034558600000000	-89.429237399999990
+95	\N	Weymouth	Massachusetts	43.034558600000000	-89.429237399999990
+96	Michigan Headache & Neurological Institute	Ann Arbor	Michigan	42.255000100000000	-83.697736700000000
+97	Greater Ann Arbor Neurology	Ann Arbor	Michigan	42.569023300000000	-83.806315700000000
+99	South Kent Family Care	Kentwood	Michigan	42.905122899999990	-85.610844800000000
+100	\N	Lansing	Michigan	43.034558600000000	-89.429237399999990
+101	Promed Family Practice	Portage	Michigan	42.202956700000000	-85.642702000000000
+102	St. Joseph Mercy Oakland 	Pontiac	Michigan	42.614925100000000	-83.276690100000000
+104	Park Nicollet Clinic—Eagan 	Eagan	Minnesota	44.788471000000000	-93.200723000000000
+105	Noran Neurological Clinic	Maplewood	Minnesota	44.950967899999990	-93.262998900000000
+106	\N	Ballwin	Missouri	43.034558600000000	-89.429237399999990
+107	Hannibal Clinic	Hannibal	Missouri	39.711098300000000	-91.447097399999990
+109	\N	Kennett	Missouri	43.034558600000000	-89.429237399999990
+110	\N	St. Louis	Missouri	43.034558600000000	-89.429237399999990
+111	Ryan Headache Center	St. Louis	Missouri	38.652161300000000	-90.502428900000000
+113	East Lincoln Internal Medicine	Lincoln	Nebraska	40.767394499999990	-96.626859900000000
+114	Renown Health	Reno	Nevada	39.529632900000000	-119.813802700000000
+115	Northern Nevada Medical Center	Sparks	Nevada	39.541115700000000	-119.697359700000000
+116	\N	Concord	New Hampshire	43.034558600000000	-89.429237399999990
+118	\N	Bloomfield	New Jersey	43.034558600000000	-89.429237399999990
+119	Edison Neurologic Associates	Edison	New Jersey	40.597655900000000	-74.357510200000000
+120	\N	Emerson	New Jersey	43.034558600000000	-89.429237399999990
+121	\N	Kearny	New Jersey	43.034558600000000	-89.429237399999990
+123	UMDNJ - University Headache Center 	Stafford	New Jersey	40.743425800000000	-74.191820800000000
+124	Vigman & Pollock	Summit	New Jersey	40.717040500000000	-74.359404800000000
+126	White Mountain Neurology	Alamogordo	New Mexico	32.899532500000000	-105.960265000000000
+127	University of New Mexico - Clinic Neuroscience Center	Albuquerque	New Mexico	35.089060700000000	-106.617605800000000
+128	Presbyterian Medical Group - Northside 	Albuquerque	New Mexico	35.084385900000000	-106.650422000000000
+129	\N	Capitan	New Mexico	43.034558600000000	-89.429237399999990
+131	Regional Neurological Associates	Bronx	New York	40.896212600000000	-73.859829200000000
+132	Montefiore Medical Center 	Bronx	New York	40.880429100000000	-73.880040999999990
+133	\N	Bronx	New York	43.034558600000000	-89.429237399999990
+135	Ontario Neurology Associates	Canandaigua	New York	43.126013400000000	-77.518176799999990
+136	Five Towns Neurology	Cedarhurst	New York	40.629131000000000	-73.708950000000000
+137	Mount Sinai Center for Headache and Pain Medicine 	New York	New York	40.789077000000010	-73.954008000000000
+138	New York Headache Center	New York	New York	40.774140000000000	-73.963436000000000
+139	The Headache Institute St. Luke's Hospital	New York	New York	40.712775300000000	-74.005972800000000
+140	\N	Owego	New York	43.034558600000000	-89.429237399999990
+142	Greater Rochester Neurological	Rochester	New York	43.120290999999990	-77.591575100000000
+144	\N	Stony Brook	New York	43.034558600000000	-89.429237399999990
+145	Neurologic Consultants of Westchester	White Plains	New York	40.967683800000000	-73.884028800000000
+146	Kinkel Neurologic Center	Williamsville	New York	42.964263600000000	-78.712411699999990
+147	Blue Ridge Headache Center	Asheville	North Carolina	35.595058100000000	-82.551486900000000
+148	Carolina Headache Institute	Chapel Hill	North Carolina	35.915903800000000	-78.933333900000000
+149	Mountain Medical Associates	Clyde	North Carolina	35.526478700000000	-82.947820400000000
+150	Duke Health Center at Morreene Road	Durham	North Carolina	36.009347300000000	-78.955140399999990
+152	Raleigh Neurology 	Raleigh	North Carolina	35.800678600000000	-78.731413000000000
+153	Boice-Willis Clinic	Rocky Mount	North Carolina	35.978985000000000	-77.842920999999990
+154	Triad Neurological Associates	Winston-Salem	North Carolina	36.060010700000000	-80.297631000000000
+156	Cleveland Clinic - Neurological Center for Pain	Cleveland	Ohio	41.507574900000000	-81.605818599999990
+157	Cleveland Neurological Center	Cleveland	Ohio	41.505667700000000	-81.605269700000000
+158	OrthoNeuro	Columbus	Ohio	40.122744600000000	-82.947434899999990
+159	Grove City Family Health	Grove City	Ohio	39.840117000000000	-83.072859999999990
+162	\N	Westlake	Oklahoma	43.034558600000000	-89.429237399999990
+163	Tulsa Neurology Clinic	Tulsa	Oklahoma	36.059895600000000	-95.923043600000000
+164	OMNI Medical Group	Tulsa	Oklahoma	43.060479200000000	-87.926647300000010
+165	The Corvallis Clinic at Waverly Drive	Albany	Oregon	44.624872200000010	-123.071887200000000
+166	Samaritan Pacific Internal Medicine 	Newport	Oregon	44.627201900000000	-124.062091200000000
+168	Geisinger Health System 	Danville	Pennsylvania	40.814725600000000	-77.941762799999990
+169	\N	Doylestown	Pennsylvania	43.034558600000000	-89.429237399999990
+170	Gumm Family Practice	Greensburg	Pennsylvania	43.763591100000000	-87.748883800000000
+171	Penn State Hershey Neurology	Hershey	Pennsylvania	40.268786700000000	-76.660221999999990
+172	\N	Jeannette	Pennsylvania	43.034558600000000	-89.429237399999990
+174	\N	Philadelphia	Pennsylvania	43.034558600000000	-89.429237399999990
+175	Jefferson Headache Center	Philadelphia	Pennsylvania	39.948083900000000	-75.156145600000000
+176	UPMC Headache Center	Pittsburgh	Pennsylvania	40.446429100000000	-79.954938400000000
+178	Swarthmore Neurology Associates	Ridley Park 	Pennsylvania	39.863873700000000	-75.337050300000000
+179	South Hampton Family Practice	Columbia	South Carolina	33.983697700000000	-80.968482299999990
+180	Neurological Medicine	Clarksville	Tennessee	43.200299700000000	-88.700007700000000
+181	\N	Germantown	Tennessee	43.034558600000000	-89.429237399999990
+183	Nashville Neuroscience Group	Nashville	Tennessee	36.152285000000000	-86.801853499999990
+184	Erlanger Ooltewah FamilyMedicine	Ooltewah	Tennessee	35.090463600000000	-85.064423699999990
+185	\N	Abilene	Texas	43.034558600000000	-89.429237399999990
+186	Associated Neurological Specialties 	Austin	Texas	30.006698300000000	-97.851731199999990
+187	Austin Pain Associates 	Austin	Texas	30.232807700000000	-97.803022500000000
+189	Austin Headache Clinic 	Austin	Texas	30.295857300000000	-97.824906300000000
+190	\N	Austin	Texas	43.034558600000000	-89.429237399999990
+191	\N	Conroe	Texas	43.034558600000000	-89.429237399999990
+193	Dallas Headache Clinic	Dallas	Texas	32.872545900000000	-96.771191000000000
+194	Texas Neurology 	Dallas	Texas	32.839929700000000	-96.773743400000000
+196	\N	Fort Worth	Texas	43.034558600000000	-89.429237399999990
+197	Hugman-Kent Clinic	Gladewater	Texas	32.537184000000000	-94.944454000000010
+198	Methodist Neurological Institute	Houston	Texas	29.710785100000000	-95.400646400000000
+200	Houston Neurology Associates	Houston	Texas	29.692531000000000	-95.518800000000000
+201	Houston Headache Clinic	Houston	Texas	29.783275000000000	-95.529548999999990
+202	Diagnostic Clinic of Longview	Longview	Texas	32.533440000000000	-94.731403300000000
+204	Dallas Neurological Associates	Richardson	Texas	32.834457600000000	-96.705853600000000
+205	East Texas Neurology 	Tyler	Texas	31.316103899999990	-94.752129300000000
+206	Beaver/Milford/Parowan Medical Clinics	Beaver	Utah	37.842605800000000	-112.819947900000000
+207	Rocky Mountain Neurological Associates	Murray	Utah	40.673900900000000	-111.850476300000000
+209	John A. Moran Eye Center	Salt Lake City	Utah	40.769532600000000	-111.837665000000000
+210	Lifetree Clinical Research and Pain Clinic	Salt Lake City	Utah	40.687699900000000	-111.872741600000000
+211	Canyon View Medical Group	Spanish Fork	Utah	40.108493700000000	-111.660576200000000
+1	Anniston Neurology & Headache Management Center	Anniston	Alabama	33.659599800000000	-85.825337600000000
+2	Crown  Comprehensive Headache Center Inc	Huntsville	Alabama	34.724235500000000	-86.578382000000000
+8	Four Peaks Neurology	Scottsdale	Arizona	33.574076500000000	-111.885839400000000
+12	Southwest Neurological Institute	Fort Smith	Arkansas	35.385924200000000	-94.398547499999990
+17	\N	La Mesa	California	43.034558600000000	-89.429237399999990
+20	\N	Los Angeles	California	43.034558600000000	-89.429237399999990
+21	David Geffen School of Medicine at UCLA	Los Angeles	California	34.064282899999990	-118.442356200000000
+28	University of California San Francisco - Headache Center	San Francisco	California	37.784466500000000	-122.440442500000000
+35	Stanford School of Medicine Headache Clinic	Stanford	California	37.433045100000000	-122.175111800000000
+38	Summit Headache and Neurologic Institute	Englewood	Colorado	39.653473400000000	-104.980214500000000
+44	\N	Altamonte Springs	Florida	43.034558600000000	-89.429237399999990
+47	Neurologic Center of South Florida	Miami	Florida	25.702134800000000	-80.347650100000000
+51	Family Practice of Saint Cloud	Saint Cloud	Florida	28.246155000000000	-81.303815000000000
+56	Southern Crescent Neurological Clinic	Fayetteville	Georgia	33.449953500000000	-84.508294900000000
+61	University Neurologists	Chicago	Illinois	43.075370799999990	-89.433046199999990
+64	North Suburban Wellness 	Highland Park	Illinois	42.183867400000000	-87.798779700000000
+69	Northern Indiana Neurological	Merrillville	Indiana	41.461922500000010	-87.330937699999990
+74	\N	Olathe	Kansas	43.034558600000000	-89.429237399999990
+75	Quivira Internal Medicine	Overland Park	Kansas	38.936266800000000	-94.721973699999990
+78	Neuroscience Associates of Northern Kentucky	Crestview Hills	Kentucky	39.023819900000000	-84.564528099999990
+85	Pediatric Associates of Lewiston	Lewiston	Maine	44.123378100000000	-70.196659200000000
+89	Brigham and Women's/Faulkner Neurology 	Boston	Massachusetts	42.301641100000000	-71.128781699999990
+92	Beth Israel Deaconess Healthcare- Medical Care Center 	Lexington	Massachusetts	42.339606300000000	-71.104981999999990
+98	University of Michigan Health System	Ann Arbor	Michigan	42.283914300000010	-83.733276600000000
+103	CCambridge Medical Center	Cambridge	Minnesota	43.013742200000000	-89.027678200000000
+108	Neurological Consultants of Kansas City	Kansas City	Missouri	39.047224900000000	-94.591774899999990
+112	Family Medical Specialties	Holdrege	Nebraska	40.449555600000000	-99.386214999999990
+117	Laconia Clinic	Laconia	New Hampshire	43.530370800000000	-71.472226800000000
+122	Coastal Physicians & Surgeons	Somers Point	New Jersey	39.315528500000000	-74.591612500000000
+125	Neurology & Neurophysiology Associates of NJ	Turnersville	New Jersey	39.741419100000000	-75.047915600000000
+130	South Shore Neurologic Associates	Bay Shore	New York	40.729303200000000	-73.209231300000000
+134	FamilyCare Medical Group – Neurological Division 	Camillus	New York	43.039233000000000	-76.304096500000000
+141	Pain Symptom Management Center	Rochester	New York	43.156577899999990	-77.608846500000000
+143	Schenectady Neurological Consultants and the Headache Center of Northeastern NY	Schenectady	New York	40.774140000000000	-73.963436000000000
+151	Carolinas Headache Clinic	Matthews	North Carolina	35.120765400000000	-80.713934000000000
+155	University of Cincinnati Physicians	Cincinnati	Ohio	39.136565399999990	-84.504946800000000
+160	ExpressMed	Hilliard	Ohio	40.033396100000000	-83.158245100000000
+161	OSU Family Medicine at CarePoint Lewis Center Primary Care	Lewis Center	Ohio	40.198388400000000	-83.010098700000000
+167	Headache and Neurologic Center of Philadelphia	Bala Cynwyd	Pennsylvania	40.005330099999990	-75.219190400000000
+173	Meadowbrook Neurology Group	Meadowbrook	Pennsylvania	40.185159400000000	-75.078727000000000
+177	Associates in Neurology of Pittsburgh	Pittsburgh	Pennsylvania	40.445349200000000	-79.827182499999990
+182	Semmes-Murphey Neurologic & Spine Institute	Memphis	Tennessee	35.125713900000000	-89.853169400000000
+188	Headache & Pain Center	Austin	Texas	43.054939800000000	-89.397697600000000
+192	Sadler Clinic	Conroe	Texas	30.311876900000000	-95.456051199999990
+195	Anodyne Headache and PainCare	Dallas	Texas	32.883121000000000	-96.767795999999990
+199	Memorial Neurological Association 	Houston	Texas	29.693175500000000	-95.521950300000000
+203	Houston Neurological Institute - Pasadena	Pasadena	Texas	29.659169100000000	-95.181569000000010
+208	University Health Neurology	Salt Lake City	Utah	43.077308599999990	-89.431556700000000
+212	University of Vermont Medical Group at Fletcher Allen	Burlington	Vermont	44.479661700000000	-73.194246700000000
+213	\N	Rutland	Vermont	43.034558600000000	-89.429237399999990
+214	Neurology & Headache Treatment Center 	Alexandria	Virginia	38.828289900000000	-77.110407200000000
+215	University of Virginia Health System	Charlottesville	Virginia	38.031758800000000	-78.500715399999990
+216	Neurology Services of Southwest VA	Blacksburg	Virginia	37.196400000000000	-80.401300000000000
+217	Neurological Associates Inc	Richmond	Virginia	42.096908900000000	-87.797537600000000
+218	Holland Road Family Medicine	Virginia Beach	Virginia	36.828659000000000	-76.129180900000000
+219	Prince William Neurology Inc 	Woodbridge	Virginia	40.557598600000000	-74.284602200000000
+220	\N	Issaquah	Washington	43.034558600000000	-89.429237399999990
+221	Neurology Headache and Multiple Sclerosis Clinic at UWMC	Seattle	Washington	47.649872200000000	-122.308229600000000
+222	Krischner Gordon and Erlich Mds	Seattle	Washington	47.606209500000000	-122.332070800000000
+223	UW Neurology Clinic	Madison	Wisconsin	43.077308599999990	-89.431556700000000
+224	Aurora Health Center	Manitowoc	Wisconsin	43.065674700000000	-88.467457600000000
+225	Columbia St. Mary's	Milwaukee	Wisconsin	43.061011300000000	-87.880376099999990
+226	\N	Stevens Point	Wisconsin	43.034558600000000	-89.429237399999990
+227	Klasinski Clinic 	Stevens Point	Wisconsin	44.530834600000000	-89.576653600000000
+228	\N	Calgary	Alberta	43.034558600000000	-89.429237399999990
+229	\N	Calgary	Alberta	43.034558600000000	-89.429237399999990
+230	\N	Edmonton	Alberta	43.034558600000000	-89.429237399999990
+231	\N	Vancouver	British Columbia	43.034558600000000	-89.429237399999990
+232	\N	Winnipeg	Manitoba	43.034558600000000	-89.429237399999990
+233	\N	Huntsville	Ontario	43.034558600000000	-89.429237399999990
+234	\N	Ottawa	Ontario	43.034558600000000	-89.429237399999990
+235	\N	Ottawa	Ontario	43.034558600000000	-89.429237399999990
+236	\N	Toronto	Ontario	43.034558600000000	-89.429237399999990
+237	Montreal Migraine Clinic 	Montreal	Quebec	45.528792300000000	-73.563975200000000
+238	\N	Trois-Rivières	Quebec	43.034558600000000	-89.429237399999990
+239	\N	Saskatoon	Saskatchewan	43.034558600000000	-89.429237399999990
 \.
 
 

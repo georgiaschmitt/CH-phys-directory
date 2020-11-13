@@ -19,24 +19,41 @@
 
 
 function initMap() {
-        const usa = { lat: 39.8283, lng: -98.5795};
-        const map = new google.maps.Map(document.getElementById("map"), {
-          zoom: 3.5,
-          center: usa,
-        });
-        const marker = new google.maps.Marker({
-          position: usa,
-          map: map,
-        });
-    }
+    const usa = { lat: 39.8283, lng: -98.5795};
+    const map = new google.maps.Map(document.getElementById("map"), {
+        zoom: 3.5,
+        center: usa,
+    });
+    
+    const locationInfo = new google.maps.InfoWindow();
 
-
-$.get('/api/locations', (locations) => {
+   
+    $.get('/api/locations', (locations) => {
         for (const loc of locations) {
+            const locationInfoContent = (`
+                <div class="window-content">
+                    <ul class="location-info">
+                        <li><br>${loc.physicians}</li>
+                        <li><b>${loc.institution}</li>
+                        <li><b>${loc.city}, ${loc.state}</li>
+                    </ul>
+                </div>
+            `);
+            const locationMarker = new google.maps.Marker({
+                position: {
+                    lat: loc.lat,
+                    lng: loc.lng
+                },
+                map:map,
+            });
 
-
-
-//     for (const berry in data.results) {
-//         $('#berries').append(`${data.results[berry].name}<br>`);
-//     }
-// })
+            locationMarker.addListener('click', () => {
+                locationInfo.close();
+                locationInfo.setContent(locationInfoContent);
+                locationInfo.open(map, locationMarker);
+            });
+        }
+    }).fail(() => {
+        alert((`Data not able to be loaded!`));
+    });
+}

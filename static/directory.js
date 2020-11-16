@@ -56,10 +56,10 @@ $('.bookmark').on('click', (evt) => {
     const buttonId = button.attr('id');
 
     const formInputs = {
-        'physician': $('#buttonId').val()
+        'physician': buttonId
     };
 
     $.post('/new-bookmark', formInputs, (res) => {
-        
+    console.log(res)
     });
   });

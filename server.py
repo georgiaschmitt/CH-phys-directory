@@ -110,15 +110,15 @@ def submit_suggestion():
     flash('Your suggestion has been submitted! Thank you!')
     return redirect("/")
 
-@app.route("/favorites")
-def show_user_favorites():
-    """Show a user's favorites."""
+@app.route("/bookmarks")
+def show_user_bookmarks():
+    """Show a user's bookmarks."""
     if 'user_id' in session:
         user = crud.get_user_by_id(session['user_id'])
-        return render_template("user_favorites.html", user=user)
+        return render_template("user_bookmarks.html", user=user)
     else:
         return redirect("/")
-        # grey out the favorites button??
+        # grey out the bookmarks button??
 
 @app.route("/new-bookmark", methods=["POST"])
 def add_bookmark():

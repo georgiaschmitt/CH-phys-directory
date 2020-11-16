@@ -7,7 +7,10 @@ HTML
 Jinja
 CSS
 Javascript
-Jquery
+JQuery
 AJAX
 JSON
 Bootstrap
+Postgres
+
+ 

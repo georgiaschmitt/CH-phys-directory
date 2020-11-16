@@ -25,9 +25,11 @@ def create_physician(name, location):
     db.session.commit()
     return physician
 
-def add_favorite(user, physician):
+def add_favorite(user_id, physician_id):
     """Create and return a new favorite."""
     
+    user = User.query.get(user_id)
+    physician = Physician.query.get(physician_id)
     user.favorites.append(physician)
     db.session.commit()
     return f"Added favorite: {physician}"

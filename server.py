@@ -120,6 +120,15 @@ def show_user_favorites():
         return redirect("/")
         # grey out the favorites button??
 
+@app.route("/new-bookmark", methods=["POST"])
+def add_bookmark():
+    """Add a provider to a user's bookmarked list in the database."""
+
+    user_id = session['user_id']
+    physician_id = request.form.get("physician")
+    add = crud.add_favorite(user_id, physician_id)
+    return add
+
 
 if __name__ == '__main__':
     connect_to_db(app)

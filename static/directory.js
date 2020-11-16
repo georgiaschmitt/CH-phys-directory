@@ -1,23 +1,5 @@
 "use strict";
 
-// const addToBookmarks = (physician) => {
-//     $('#bookmarks').append(`
-//       <tr>
-//         <td>${physician}</td>
-//       </tr>
-//     `);
-//   };
-
-
-// // Event handlers
-
-// $('.add-to-bookmarks').on('click', () => {
-//     addToBookmarks(physician);
-//     incrementBookmark(1);
-
-//   });
-
-
 function initMap() {
     const usa = { lat: 39.8283, lng: -98.5795};
     const map = new google.maps.Map(document.getElementById("map"), {
@@ -57,3 +39,27 @@ function initMap() {
         alert((`Data not able to be loaded!`));
     });
 }
+
+// const addToBookmarks = (physician) => {
+//     $('#bookmarks').append(`
+//       <tr>
+//         <td>${physician}</td>
+//       </tr>
+//     `);
+//   };
+
+
+// // Event handlers
+
+$('.bookmark').on('click', (evt) => {
+    const button = $(evt.target);
+    const buttonId = button.attr('id');
+
+    const formInputs = {
+        'physician': $('#buttonId').val()
+    };
+
+    $.post('/new-bookmark', formInputs, (res) => {
+        
+    });
+  });

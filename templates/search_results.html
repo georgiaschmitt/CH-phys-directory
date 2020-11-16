@@ -8,8 +8,10 @@
 {% for provider in providers %}
     <li>
         <a href="/providers/{{ provider.physician_id }}">
-        {{ provider.name }}
-        </a>
+        {{ provider.name }} 
+        </a> 
+        <button type="button" class='bookmark' id="{{ provider.physician_id }}">Add to bookmarks</button>
+
     </li>
 {% endfor %}
 

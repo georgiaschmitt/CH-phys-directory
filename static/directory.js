@@ -59,7 +59,11 @@ $('.bookmark').on('click', (evt) => {
         'physician': buttonId
     };
 
+    button.prop('disabled', true);
+    button.html("Bookmarked")
+
     $.post('/new-bookmark', formInputs, (res) => {
-    console.log(res)
     });
+
+
   });

@@ -47,6 +47,14 @@ def user_login():
         flash('Username and password do not match, please try again!')
     return redirect("/")
 
+@app.route("/logout")
+def user_logout():
+    """Log a user out."""
+    session.clear()
+    flash('Logged out')
+    return redirect("/")
+
+
 @app.route("/api/locations")
 def location_info():
     """JSON information about provider locations."""
@@ -86,9 +94,12 @@ def search_by_name():
 @app.route("/providers")
 def all_providers():
     """View all providers."""
-
+    if "user_id" in session:
+        user = crud.get_user_by_id(session['user_id'])
+    else:
+        user = None
     providers = crud.get_all_physicians()
-    return render_template("all_providers.html", providers=providers)
+    return render_template("all_providers.html", providers=providers, user=user)
 
 
 @app.route("/providers/<provider_id>")

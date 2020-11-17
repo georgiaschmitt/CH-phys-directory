@@ -22,11 +22,12 @@
         </a>  
         {% if "user_id" in session %}
           {% if provider in user.favorites %}
-        <button type="button" class='bookmark' id="{{ provider.physician_id }}">Bookmarked</button>
-
+        <button type="button" class='bookmark' id="{{ provider.physician_id }}" disabled='disabled'>Bookmarked</button>
           {% else %}
         <button type="button" class='bookmark' id="{{ provider.physician_id }}">Add to bookmarks</button>
           {% endif %}
+        {% else %}
+        <button type="button" class='bookmark' id="{{ provider.physician_id }}" disabled='disabled'>Add to bookmarks</button>
         {% endif %}
 
     </li>

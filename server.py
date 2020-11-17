@@ -105,8 +105,12 @@ def all_providers():
 @app.route("/providers/<provider_id>")
 def show_provider(provider_id):
     """Show details on a provider."""
+    if "user_id" in session:
+        user = crud.get_user_by_id(session['user_id'])
+    else:
+        user = None
     provider = crud.get_physician_by_id(provider_id)
-    return render_template('provider_details.html', provider=provider)
+    return render_template('provider_details.html', provider=provider, user=user)
 
 @app.route("/suggestion_form")
 def suggest_provider():

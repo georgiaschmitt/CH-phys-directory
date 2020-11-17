@@ -9,7 +9,16 @@
   {{ provider.location.institution }}<br>
   {{ provider.location.city }}<br>
   {{ provider.location.state }}<br><br>
-  <button type="button" class='bookmark' id="{{ provider.physician_id }}">Add to bookmarks</button>
+
+  {% if "user_id" in session %}
+    {% if provider in user.favorites %}
+      <button type="button" class='bookmark' id="{{ provider.physician_id }}" disabled='disabled'>Bookmarked</button>
+    {% else %}
+      <button type="button" class='bookmark' id="{{ provider.physician_id }}">Add to bookmarks</button>
+    {% endif %}
+  {% else %}
+    <button type="button" class='bookmark' id="{{ provider.physician_id }}" disabled='disabled'>Add to bookmarks</button>
+  {% endif %}
 
 </p>
 <br><br>

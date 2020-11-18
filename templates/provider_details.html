@@ -3,6 +3,9 @@
 {% block title %}{{ provider.name }} - Details{% endblock %}
 
 {% block body %}
+
+<div id="map"></div>
+
 <h1>{{ provider.name }}</h1>
 
 <p>
@@ -20,9 +23,12 @@
     <button type="button" class='bookmark' id="{{ provider.physician_id }}" disabled='disabled'>Add to bookmarks</button>
   {% endif %}
 
+
 </p>
 <br><br>
 <a href="/providers">Back to all providers</a>
 
+<script src="/static/directory.js"></script>
 
 {% endblock %}
+

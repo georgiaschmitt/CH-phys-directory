@@ -79,16 +79,25 @@ def location_info():
 def search_by_state():
     """Search providers by state."""
 
+    if "user_id" in session:
+        user = crud.get_user_by_id(session['user_id'])
+    else:
+        user = None
+
     query_state = request.args.get('state')
     providers = crud.get_physicians_by_state(query_state)
-    return render_template('search_results.html', providers=providers)
+    return render_template('search_results.html', providers=providers, user=user)
 
 @app.route("/search/name")
 def search_by_name():
     """Search providers by name."""
+    if "user_id" in session:
+        user = crud.get_user_by_id(session['user_id'])
+    else:
+        user = None
     name = request.args.get('name')
     providers = crud.get_physicians_by_name(name)
-    return render_template('search_results.html', providers=providers)
+    return render_template('search_results.html', providers=providers, user=user)
 
 
 @app.route("/providers")

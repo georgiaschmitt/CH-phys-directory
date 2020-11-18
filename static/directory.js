@@ -40,6 +40,17 @@ function initMap() {
     });
 }
 
+function initproviderdetailMap() {
+    const usa = { lat: 39.8283, lng: -98.5795};
+    const map = new google.maps.Map(document.getElementById("providerdetailmap"), {
+        zoom: 3.5,
+        center: usa,
+    });
+}
+    
+    // const locationInfo = new google.maps.InfoWindow();
+
+
 // const addToBookmarks = (physician) => {
 //     $('#bookmarks').append(`
 //       <tr>

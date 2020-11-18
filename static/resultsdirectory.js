@@ -10,40 +10,32 @@ function initMap() {
     const locationInfo = new google.maps.InfoWindow();
 
    
-    // $('#state-search').on('submit', (evt) => {
-    //   evt.preventDefault();
     
-      const formData = {
-        state: $('#state').val()
-      };
-    
-      $.get('/api/searchresults', formData, (res) => {
-        for (const loc of locations) {
+    document.querySelectorAll('.provider').forEach((el) => {
+        const section = $(el);
+        const locationInfoContent = (`
+            <div class="window-content">
+                ${section.data('locationId')}<br>
+                <b>${section.data('name')}</b><br>
+                ${section.data('institutionName')}<br>
+                ${section.data('city')}, ${section.data('state')}<br>
 
-            const locationInfoContent = (`
-                <div class="window-content">
-                    ${loc.id}<br>
-                    <b>${loc.providers}</b><br>
-                    ${loc.institution}<br>
-                    ${loc.city}, ${loc.state}</li>
-                </div>
-            `);
-            const locationMarker = new google.maps.Marker({
-                position: {
-                    lat: loc.lat,
-                    lng: loc.lng
-                },
-                map:map,
-            });
+                
+            </div>
+        `);
+        const locationMarker = new google.maps.Marker({
+            position: {
+                lat: Number(section.data('lat')),
+                lng: Number(section.data('lng'))
+            },
+            map:map,
+        });
 
-            locationMarker.addListener('click', () => {
-                locationInfo.close();
-                locationInfo.setContent(locationInfoContent);
-                locationInfo.open(map, locationMarker);
-            });
-        }
-    }).fail(() => {
-        alert((`Data not able to be loaded!`));
+        locationMarker.addListener('click', () => {
+            locationInfo.close();
+            locationInfo.setContent(locationInfoContent);
+            locationInfo.open(map, locationMarker);
+        });
     });
 }
 

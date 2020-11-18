@@ -64,8 +64,10 @@ def search_by_state():
         user = crud.get_user_by_id(session['user_id'])
     else:
         user = None
+    
 
     query_state = request.args.get('state')
+    session['state'] = query_state
     providers = crud.get_physicians_by_state(query_state)
     return render_template('search_results.html', providers=providers, user=user)
 
@@ -73,7 +75,7 @@ def search_by_state():
 def search_results_info():
     """JSON information about provider search results."""
 
-    query_state = request.args.get("state")
+    query_state = session['state']
 
     locations = [
         {
@@ -85,7 +87,7 @@ def search_results_info():
             "lat": float(location.lat),
             "lng": float(location.lng),
         }
-        for location in crud.get_physicians_by_state(query_state)
+        for location in crud.get_locations_by_state(query_state)
     ]
     print(locations)
     return jsonify(locations)
@@ -143,7 +145,7 @@ def show_provider(provider_id):
 
 @app.route("/suggestion_form")
 def suggest_provider():
-    return render_template('suggestion_form.html')
+    return render_template('suggestion_form.php')
 
 @app.route("/suggestion_submit", methods=['POST'])
 def submit_suggestion():

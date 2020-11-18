@@ -8,7 +8,16 @@
 <div id="map"></div>
 
 {% for provider in providers %}
-    <li>
+    <section
+      class="provider"
+      data-location-id="{{ provider.location.location_id }}"
+      data-name="{{ provider.name }}"
+      data-institution-name="{{ provider.location.institution}}"
+      data-city="{{ provider.location.city }}"
+      data-state="{{ provider.location.state }}"
+      data-lat="{{ provider.location.lat}}"
+      data-lng="{{ provider.location.lng }}"
+    >
       <a href="/providers/{{ provider.physician_id }}">
       {{ provider.name }} 
       </a> 
@@ -21,7 +30,7 @@
       {% else %}
         <button type="button" class='bookmark' id="{{ provider.physician_id }}" disabled='disabled'>Add to bookmarks</button>
       {% endif %}
-    </li>
+    </section>
 {% endfor %}
 
 

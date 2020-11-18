@@ -6,10 +6,18 @@ function initMap() {
         zoom: 3.5,
         center: usa,
     });
+    
     const locationInfo = new google.maps.InfoWindow();
 
    
-    $.get('/api/locations', (locations) => {
+    // $('#state-search').on('submit', (evt) => {
+    //   evt.preventDefault();
+    
+      const formData = {
+        state: $('#state').val()
+      };
+    
+      $.get('/api/searchresults', formData, (res) => {
         for (const loc of locations) {
 
             const locationInfoContent = (`
@@ -39,7 +47,7 @@ function initMap() {
     });
 }
 
-
+    
 
 
 // const addToBookmarks = (physician) => {

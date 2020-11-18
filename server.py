@@ -55,25 +55,6 @@ def user_logout():
     return redirect("/")
 
 
-@app.route("/api/locations")
-def location_info():
-    """JSON information about provider locations."""
-
-    locations = [
-        {
-            "id": location.location_id,
-            "providers": crud.get_physician_name_by_location(location),
-            "institution": location.institution,
-            "city": location.city,
-            "state": location.state,
-            "lat": float(location.lat),
-            "lng": float(location.lng),
-        }
-        for location in crud.get_all_locations()
-    ]
-    print(locations)
-    return jsonify(locations)
-
 
 @app.route("/search/state")
 def search_by_state():
@@ -87,6 +68,27 @@ def search_by_state():
     query_state = request.args.get('state')
     providers = crud.get_physicians_by_state(query_state)
     return render_template('search_results.html', providers=providers, user=user)
+
+@app.route("/api/searchresults")
+def search_results_info():
+    """JSON information about provider search results."""
+
+    query_state = request.args.get("state")
+
+    locations = [
+        {
+            "id": location.location_id,
+            "providers": crud.get_physician_name_by_location(location),
+            "institution": location.institution,
+            "city": location.city,
+            "state": location.state,
+            "lat": float(location.lat),
+            "lng": float(location.lng),
+        }
+        for location in crud.get_physicians_by_state(query_state)
+    ]
+    print(locations)
+    return jsonify(locations)
 
 @app.route("/search/name")
 def search_by_name():
@@ -110,6 +112,24 @@ def all_providers():
     providers = crud.get_all_physicians()
     return render_template("all_providers.html", providers=providers, user=user)
 
+@app.route("/api/locations")
+def location_info():
+    """JSON information about provider locations."""
+
+    locations = [
+        {
+            "id": location.location_id,
+            "providers": crud.get_physician_name_by_location(location),
+            "institution": location.institution,
+            "city": location.city,
+            "state": location.state,
+            "lat": float(location.lat),
+            "lng": float(location.lng),
+        }
+        for location in crud.get_all_locations()
+    ]
+    print(locations)
+    return jsonify(locations)
 
 @app.route("/providers/<provider_id>")
 def show_provider(provider_id):

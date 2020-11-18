@@ -1,0 +1,21 @@
+{% extends 'base.html' %}
+
+{% block title %}Bookmarks for {{ user.email }}{% endblock %}
+
+{% block body %}
+<h1>Bookmarks</h1>
+
+{% for favorite in user.favorites %}
+    <li>
+      <a href="/providers/{{ favorite.physician_id }}">
+      {{ favorite.name }}
+      </a>
+    </li>
+{% endfor %}
+
+<br><br>
+<a href="/providers">Back to all providers</a><br>
+<a href="/">Back to home</a>
+
+
+{% endblock %}

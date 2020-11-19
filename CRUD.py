@@ -85,9 +85,6 @@ def get_physicians_by_state(state_query):
     """Return physician by state."""
     return Physician.query.filter(Physician.location.has(state = state_query)).all()
 
-def get_locations_by_state(state_query):
-    """Return locations by state."""
-    return Location.query.filter(Location.state == state_query).all()
 
 def get_physicians_by_name(name):
     """Return physicians by name."""

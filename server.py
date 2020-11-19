@@ -65,32 +65,10 @@ def search_by_state():
     else:
         user = None
     
-
     query_state = request.args.get('state')
-    session['state'] = query_state
     providers = crud.get_physicians_by_state(query_state)
     return render_template('search_results.html', providers=providers, user=user)
 
-@app.route("/api/searchresults")
-def search_results_info():
-    """JSON information about provider search results."""
-
-    query_state = session['state']
-
-    locations = [
-        {
-            "id": location.location_id,
-            "providers": crud.get_physician_name_by_location(location),
-            "institution": location.institution,
-            "city": location.city,
-            "state": location.state,
-            "lat": float(location.lat),
-            "lng": float(location.lng),
-        }
-        for location in crud.get_locations_by_state(query_state)
-    ]
-    print(locations)
-    return jsonify(locations)
 
 @app.route("/search/name")
 def search_by_name():

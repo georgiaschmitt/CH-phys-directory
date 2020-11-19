@@ -5,17 +5,32 @@
 {% block body %}
 <h1>Bookmarks</h1>
 
+<div id="map"></div>
+
+
 {% for favorite in user.favorites %}
-    <li>
-      <a href="/providers/{{ favorite.physician_id }}">
+  <section
+  class="provider"
+  data-location-id="{{ favorite.location.location_id }}"
+  data-name="{{ favorite.name }}"
+  data-institution-name="{{ favorite.location.institution }}"
+  data-city="{{ favorite.location.city }}"
+  data-state="{{ favorite.location.state }}"
+  data-lat="{{ favorite.location.lat }}"
+  data-lng="{{ favorite.location.lng }}"
+  >
+    <a href="/providers/{{ favorite.physician_id }}">
       {{ favorite.name }}
-      </a>
-    </li>
+    </a>
+  </section>
+
 {% endfor %}
+
 
 <br><br>
 <a href="/providers">Back to all providers</a><br>
 <a href="/">Back to home</a>
 
+<script src="/static/resultsdirectory.js"></script>
 
 {% endblock %}

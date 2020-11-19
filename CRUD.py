@@ -25,14 +25,30 @@ def create_physician(name, location):
     db.session.commit()
     return physician
 
-def add_favorite(user_id, physician_id):
-    """Create and return a new favorite."""
+def add_bookmark(user_id, physician_id):
+    """Create and return a new bookmark."""
     
     user = User.query.get(user_id)
     physician = Physician.query.get(physician_id)
     user.favorites.append(physician)
     db.session.commit()
     return f"Added favorite: {physician}"
+
+def remove_bookmark(user_id, physician_id):
+    """Remove a physician from a user's bookmarks."""
+    user = User.query.get(user_id)
+    provider = Physician.query.get(physician_id)
+    user.favorites.remove(provider)
+    db.session.commit()
+    return f"Deleted favorite: {provider}" 
+
+def remove_all_bookmarks(user_id):
+    """Remove all of a user's bookmarks."""
+    user = User.query.get(user_id)
+    user.favorites.clear()
+    db.session.commit()
+    return f"Deleted all favorites" 
+    
 
 def get_all_physicians():
     """Returns all physicians."""

@@ -5,13 +5,21 @@
 {% block body %}
 
 <div id="map"></div>
+<section
+      class="provider"
+      data-location-id="{{ provider.location.location_id }}"
+      data-name="{{ provider.name }}"
+      data-institution-name="{{ provider.location.institution}}"
+      data-city="{{ provider.location.city }}"
+      data-state="{{ provider.location.state }}"
+      data-lat="{{ provider.location.lat}}"
+      data-lng="{{ provider.location.lng }}"
+    >
+  <h1>{{ provider.name }}</h1>
 
-<h1>{{ provider.name }}</h1>
-
-<p>
-  {{ provider.location.institution }}<br>
-  {{ provider.location.city }}<br>
-  {{ provider.location.state }}<br><br>
+    {{ provider.location.institution }}<br>
+    {{ provider.location.city }}<br>
+    {{ provider.location.state }}<br><br>
 
   {% if "user_id" in session %}
     {% if provider in user.favorites %}
@@ -23,12 +31,11 @@
     <button type="button" class='bookmark' id="{{ provider.physician_id }}" disabled='disabled'>Add to bookmarks</button>
   {% endif %}
 
-
-</p>
-<br><br>
+</section>
+  <br><br>
 <a href="/providers">Back to all providers</a>
 
-<script src="/static/directory.js"></script>
+<script src="/static/resultsdirectory.js"></script>
 
 {% endblock %}
 

@@ -142,7 +142,6 @@ def show_user_bookmarks():
         return render_template("user_bookmarks.html", user=user)
     else:
         return redirect("/")
-        # grey out the bookmarks button??
 
 @app.route("/new-bookmark", methods=["POST"])
 def add_bookmark():
@@ -150,8 +149,13 @@ def add_bookmark():
 
     user_id = session['user_id']
     physician_id = request.form.get("physician")
-    add = crud.add_favorite(user_id, physician_id)
+    add = crud.add_bookmark(user_id, physician_id)
     return add
+
+@app.route("/remove-bookmark", methods=["POST"])
+def remove_bookmark():
+    """Remove a provider from a user's bookmarks."""
+    
 
 
 if __name__ == '__main__':

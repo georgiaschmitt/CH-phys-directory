@@ -66,6 +66,19 @@ $('.bookmark').on('click', (evt) => {
 
     $.post('/new-bookmark', formInputs, (res) => {
     });
+});
 
+$('.rm-bookmark').on('click', (evt) => {
+    const button = $(evt.target);
+    const buttonId = button.attr('id');
 
-  });
+    const formInputs = {
+        'physician': buttonId
+    };
+
+    button.prop('disabled', true);
+    button.html("Removed")
+
+    $.post('/remove-bookmark', formInputs, (res) => {
+    });
+});

@@ -155,7 +155,18 @@ def add_bookmark():
 @app.route("/remove-bookmark", methods=["POST"])
 def remove_bookmark():
     """Remove a provider from a user's bookmarks."""
-    
+    user_id= session['user_id']
+    physician_id = request.form.get("physician")
+    add = crud.remove_bookmark(user_id, physician_id)
+    return add
+
+@app.route("/clear-bookmarks", methods=["POST"])
+def clear_bookmarks():
+    """Clear all of a user's bookmarks."""
+    user_id = session['user_id']
+    add = crud.remove_all_bookmarks(user_id)
+    return add
+
 
 
 if __name__ == '__main__':

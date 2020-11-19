@@ -69,3 +69,28 @@ $('.bookmark').on('click', (evt) => {
 
 
   });
+
+$('.rm-bookmark').on('click', (evt) => {
+    const button = $(evt.target);
+    const buttonId = button.attr('id');
+
+    const formInputs = {
+        'physician': buttonId
+    };
+
+    button.prop('disabled', true);
+    button.html("Removed")
+
+    $.post('/remove-bookmark', formInputs, (res) => {
+    });
+});
+
+$('.clear-bookmarks').on('click', (evt) => {
+    const button = $(evt.target);
+
+    button.prop('disabled', true);
+    button.html("All bookmarks cleared")
+
+    $.post('/clear-bookmarks', (res) => {
+    });
+});

@@ -3,3 +3,10 @@
     width: 100%;
   }
 
+a img.logo {
+
+      max-height:700px;
+      height:25%;
+      width:auto;
+}
+

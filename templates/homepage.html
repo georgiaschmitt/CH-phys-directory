@@ -7,13 +7,26 @@
  <!-- Banner -->
  <section id="banner">
   <h1>Find a doctor</h1>
-  <p>who treats cluster headache</p>
+  <p>who effectively, compassionately treats cluster headache</p>
 </section>
 
 <!-- One -->
 <section id="one" class="wrapper">
   <div class="inner">
     <div class="flex flex-3">
+      <article>
+        <header>
+          <h3>Search by name</h3>
+        </header>
+        <form action="/search/name" id="state-search">
+          <p>
+          Search by name<input type="text" name="name">
+          </p> 
+          <p>
+            <input type="submit">
+          </p>
+        </form>
+      </article>
       <article>
         <header>
           <h3>Search by state</h3>
@@ -27,19 +40,7 @@
           </p>
         </form>
       </article>
-      <article>
-        <header>
-          <h3>Search by name</h3>
-        </header>
-        <form action="/search/name" id="state-search">
-          <p>
-          Search by name<input type="text" name="name">
-          </p> 
-          <p>
-            <input type="submit">
-          </p>
-        </form><br>
-      </article>
+     
       <article>
         <header>
           <h3>View all providers</h3>
@@ -94,14 +95,7 @@
 <footer id="footer">
   <div class="inner">
     <div class="flex">
-      
-      <ul class="icons">
-        <li><a href="#" class="icon fa-facebook"><span class="label">Facebook</span></a></li>
-        <li><a href="#" class="icon fa-twitter"><span class="label">Twitter</span></a></li>
-        <li><a href="#" class="icon fa-linkedin"><span class="label">linkedIn</span></a></li>
-        <li><a href="#" class="icon fa-pinterest-p"><span class="label">Pinterest</span></a></li>
-        <li><a href="#" class="icon fa-vimeo"><span class="label">Vimeo</span></a></li>
-      </ul>
+      <a href="https://www.clusterbusters.org"><img src="/static/images/cb-logo.png" class="logo"></a>
     </div>
   </div>
 </footer>

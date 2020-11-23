@@ -123,16 +123,8 @@ def show_provider(provider_id):
 
 @app.route("/suggestion_form")
 def suggest_provider():
-    return render_template('suggestion_form.php')
+    return render_template('suggestion_form.html')
 
-@app.route("/suggestion_submit", methods=['POST'])
-def submit_suggestion():
-    name = request.form.get("name")
-    institution = request.form.get("institution")
-    city = request.form.get("city")
-    state = request.form.get("state")
-    flash('Your suggestion has been submitted! Thank you!')
-    return redirect("/")
 
 @app.route("/bookmarks")
 def show_user_bookmarks():

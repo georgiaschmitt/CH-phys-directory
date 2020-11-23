@@ -1,23 +1,29 @@
+
+
 <!doctype html>
 <html lang='en'>
+<!--
+	Theory by TEMPLATED
+	templated.co @templatedco
+	Released for free under the Creative Commons Attribution 3.0 license (templated.co/license)
+-->
   <head>
     <meta charset="utf-8">
-    <meta name="viewport" content="width=device-width">
+		<meta name="viewport" content="width=device-width, initial-scale=1">
     <title>Cluster Headache Provider Directory
     </title>
     
+    <link rel="stylesheet" href="/static/assets/css/main.css" />
     <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css" integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
     <link rel="stylesheet" href="/static/styles.css">
-    <script
-      src="http://code.jquery.com/jquery-3.5.1.js"
-      integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
-      crossorigin="anonymous"></script>
-
+    
     </head>
 
   
   <body>
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+    <!-- Navigation Bar -->
+
+    <!-- <nav class="navbar fixed-top navbar-expand-lg navbar-light bg-light">
       <a class="navbar-brand" href="#">Cluster Headache Provider Directory</a>
       <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
         <span class="navbar-toggler-icon"></span>
@@ -59,6 +65,21 @@
       </div>
     </nav>
 
+   -->
+  
+				<!-- Header -->
+        <header id="header">
+          <div class="inner">
+            <a href="index.html" class="logo">Cluster Headache Provider Directory</a>
+            <nav id="nav">
+              <a href="index.html">Home</a>
+              <a href="generic.html">Generic</a>
+              <a href="/suggestion_form">Suggest a provider</a>
+            </nav>
+            <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+          </div>
+        </header>
+  
 
 
   {% for msg in get_flashed_messages() %}
@@ -72,7 +93,16 @@
 
   {% block after_body %}{% endblock %}
 
-  <script async defer 
+  <!-- Scripts -->
+<script src="assets/js/jquery.min.js"></script>
+<script src="assets/js/skel.min.js"></script>
+<script src="assets/js/util.js"></script>
+<script src="assets/js/main.js"></script>
+<script
+  src="http://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
+<script async defer 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmekBy-tOKe3uQr7priiJ7te4a_nLSUV0&callback=initMap&libraries=&v=weekly">
 // For the Google Maps Javascript API v3 the keys must be public.
 // API key is restricted to be used by only the IP addresses that I have authorized.

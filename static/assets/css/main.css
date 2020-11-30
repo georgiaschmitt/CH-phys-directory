@@ -3007,7 +3007,7 @@
 		}
 /* Flag */
 #flag {
-	padding: 12em 0 10em 0;
+	padding: 1em 0 1em 0;
 	background-image: url('../../images/cool-background.png');
 	background-size: cover;
 	background-position: top;
@@ -3043,7 +3043,7 @@
 	@media screen and (max-width: 1280px) {
 
 		#flag {
-			padding: 10em 2em 8em 2em;
+			padding: 5em 1em 4em 1em;
 		}
 
 	}
@@ -3059,7 +3059,7 @@
 	@media screen and (max-width: 736px) {
 
 		#flag {
-			padding: 8em 1.5em 6em 1.5em;
+			padding: 4em 1em 3em 1em;
 		}
 
 			#flag h1 {
@@ -3075,7 +3075,7 @@
 	@media screen and (max-width: 480px) {
 
 		#flag {
-			padding: 6em 1.5em 4em 1.5em;
+			padding: 3em 1em 2em 1em;
 		}
 
 	}

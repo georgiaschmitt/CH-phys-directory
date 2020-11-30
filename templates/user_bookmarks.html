@@ -3,9 +3,10 @@
 {% block title %}Bookmarks for {{ user.email }}{% endblock %}
 
 {% block body %}
-<h1>Bookmarks</h1>
 
 <div id="map"></div>
+
+<h1>Bookmarks</h1>
 
 
 {% for favorite in user.favorites %}
@@ -34,7 +35,10 @@
 
 <br><br>
 <a href="/providers">Back to all providers</a><br>
-
+<script
+  src="http://code.jquery.com/jquery-3.5.1.js"
+  integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
+  crossorigin="anonymous"></script>
 <script src="/static/resultsdirectory.js"></script>
 
 {% endblock %}

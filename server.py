@@ -33,6 +33,23 @@ def register_user():
         flash('Account created! Please log in.')
     return redirect("/")
 
+
+@app.route("/is_loggedin")
+def is_loggedin():
+    """JSON information about whether a user is logged in or not."""
+    
+    if "user_id" in session:
+        loggedin = "True"
+    else:
+        loggedin = "False"
+    return loggedin
+
+@app.route("/signin")
+def signin_page():
+    """Page that displays a log in and user registration form."""
+    return render_template('sign_in.html')
+
+
 @app.route("/login")
 def user_login():
     """Log a user in."""

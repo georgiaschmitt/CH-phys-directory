@@ -29,18 +29,20 @@
             <nav id="nav">
               <a href="/">Home</a>
               <a href="/suggestion_form">Suggest a provider</a>
+              <a href="/signin" id="login"></a>
             </nav>
-            <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a>
+            <!-- <a href="#navPanel" class="navPanelToggle"><span class="fa fa-bars"></span></a> -->
           </div>
         </header>
-  
 
 
   {% for msg in get_flashed_messages() %}
-    <p class="flash-msg">
+    <div class="alert alert-info" role="alert">
       {{ msg }}
-    </p>
+    </div>
+  
   {% endfor %}
+
   
   
   {% block body %}{% endblock %}
@@ -48,14 +50,18 @@
   {% block after_body %}{% endblock %}
 
   <!-- Scripts -->
-<script src="assets/js/jquery.min.js"></script> 
-<script src="assets/js/skel.min.js"></script>
-<script src="assets/js/util.js"></script>
-<script src="assets/js/main.js"></script>
+<!-- <script src="/static/assets/js/jquery.min.js"></script>  -->
+<!-- <script src="/static/assets/js/util.js"></script> -->
 <script
   src="http://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="
   crossorigin="anonymous"></script>
+  <script src="/static/assets/js/skel.min.js"></script>
+  <script src="/static/assets/js/main.js"></script>
+
+
+<script src="/static/login.js"></script>
+
 <script async defer 
     src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAmekBy-tOKe3uQr7priiJ7te4a_nLSUV0&callback=initMap&libraries=&v=weekly">
 // For the Google Maps Javascript API v3 the keys must be public.

@@ -1,5 +1,6 @@
 "use strict";
 
+
 function initMap() {
     const usa = { lat: 39.8283, lng: -98.5795};
     const map = new google.maps.Map(document.getElementById("map"), {

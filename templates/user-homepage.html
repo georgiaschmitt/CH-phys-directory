@@ -21,24 +21,25 @@
     <div class="flex flex-3">
       <article>
         <header>
-          <h3>Search by name</h3>
+          <h3><i class="fas fa-search"></i> Search by name</h3>
         </header>
         <form action="/search/name" id="state-search">
           <p>
-          Search by name<input type="text" name="name">
+          <input type="text" name="name">
           </p> 
           <p>
-            <input type="submit">
+            <form>
+              <button type="submit">Search</button>
+            </form>
           </p>
         </form>
       </article>
       <article>
         <header>
-          <h3>Search by state</h3>
+          <h3><i class="fas fa-search"></i> Search by state</h3>
         </header>
         <form action="/search/state" id="state-search">
           
-            Search by state
           
           <div class="select-wrapper">
           <select name="state" id="category">
@@ -103,7 +104,9 @@
           </div>
         </p>
           <p>
-            <input type="submit">
+            <form>
+              <button type="submit">Search</button>
+            </form>
           </p>
         </form>
         
@@ -111,8 +114,8 @@
      
       <article>
         <header>
-          <h3>View all providers</h3>
-        </header><br><br>
+          <h3><i class="far fa-address-book"></i> View all providers</h3>
+        </header><br>
         <a href="/providers" class="button special">View the entire directory</a>
       </article>
     </div>

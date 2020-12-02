@@ -33,12 +33,11 @@
   data-lat="{{ favorite.location.lat }}"
   data-lng="{{ favorite.location.lng }}"
   >
-  <a href="/providers/{{ favorite.physician_id }}">
-    {{ favorite.name }}
-  </a>
-      <button type="button" class='bookmark button small' id="{{ favorite.physician_id }}" disabled='disabled'>Bookmarked</button>
+  
       <button type="button" class='rm-bookmark button small' id=" {{ favorite.physician_id }}">Remove from bookmarks</button>
-
+      <a href="/providers/{{ favorite.physician_id }}">
+        {{ favorite.name }}
+      </a>
 
   </section>
 

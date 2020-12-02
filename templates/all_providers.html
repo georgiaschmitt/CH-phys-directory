@@ -26,10 +26,8 @@
 
 
 {% for provider in providers %}
-    <li>
-        <a href="/providers/{{ provider.physician_id }}">
-        {{ provider.name }}
-        </a>  
+    
+         
         {% if "user_id" in session %}
           {% if provider in user.favorites %}
         <button type="button" class='bookmark button small' id="{{ provider.physician_id }}" disabled='disabled'>Bookmarked</button>
@@ -39,7 +37,10 @@
         {% else %}
         <button type="button" class='bookmark button small' id="{{ provider.physician_id }}" disabled='disabled'>Add to bookmarks</button>
         {% endif %}
-    </li>
+        <a href="/providers/{{ provider.physician_id }}">
+          {{ provider.name }}
+          </a> <br>
+    
 {% endfor %}
 </div>  
 </div>

@@ -10,7 +10,9 @@
 
 <div id="map"></div>
 
-
+<div class="container">
+  <div class="row">
+    <div class="col-7">
 <h1>Bookmarks</h1>
 
 
@@ -28,18 +30,19 @@
   <a href="/providers/{{ favorite.physician_id }}">
     {{ favorite.name }}
   </a>
-      <button type="button" class='bookmark' id="{{ favorite.physician_id }}" disabled='disabled'>Bookmarked</button>
-      <button type="button" class='rm-bookmark' id=" {{ favorite.physician_id }}">Remove from bookmarks</button>
+      <button type="button" class='bookmark button small' id="{{ favorite.physician_id }}" disabled='disabled'>Bookmarked</button>
+      <button type="button" class='rm-bookmark button small' id=" {{ favorite.physician_id }}">Remove from bookmarks</button>
 
 
   </section>
 
 {% endfor %}
-
+<br>
 <button type="button" class='clear-bookmarks'>Clear all bookmarks</button>
 
 <br><br>
 <a href="/providers">Back to all providers</a><br>
+</div></div></div>
 <script
   src="http://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="

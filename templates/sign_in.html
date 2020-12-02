@@ -1,0 +1,41 @@
+{% extends 'base.html' %}
+
+
+{% block title %}Sign In or Create an Account{% endblock %}
+
+{% block body %}
+
+ <!-- Flag -->
+ <section id="flag">
+  </section>
+<br><br>
+<div class="container">
+  <div class="row">
+    <div class="col-5">
+    <form action="/login" class="form-signin">
+    <h1 class="h3 mb-3 font-weight-normal">Please sign in</h1>
+    <label for="inputEmail" class="sr-only">Email address</label>
+    <input type="email" name="login-email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+    <label for="inputPassword" class="sr-only">Password</label>
+    <input type="password" name="login-password" id="inputPassword" class="form-control" placeholder="Password" required>
+    <button class="btn btn-lg btn-block" type="submit">Sign in</button>
+    </form>
+    </div>
+    <div class="col-5 offset-1">
+        <form action="/users" method="POST" class="form-signin">
+        <h1 class="h3 mb-3 font-weight-normal">Create an account</h1>
+        <label for="inputEmail" class="sr-only">Email address</label>
+        <input type="email" name="login-email" id="inputEmail" class="form-control" placeholder="Email address" required autofocus>
+        <label for="inputPassword" class="sr-only">Password</label>
+        <input type="password" name="login-password" id="inputPassword" class="form-control" placeholder="Password" required>
+        <button class="btn btn-lg btn-block" type="submit">Create my account</button>
+        </form>
+    </div>
+  </div>
+</div>
+
+
+
+
+  
+{% endblock %}

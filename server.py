@@ -14,11 +14,8 @@ app.jinja_env.undefined = StrictUndefined
 @app.route("/")
 def homepage():
     """View homepage."""
+    return render_template("user-homepage.html")
 
-    if 'user_id' in session:
-        return render_template("user-homepage.html")
-    else:
-        return render_template("homepage.html")
 
 @app.route("/users", methods=['POST'])
 def register_user():

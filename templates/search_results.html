@@ -10,7 +10,15 @@
 </section>
 <div id="map"></div>
 
-
+<div class="container">
+  <div class="row">
+    <div class="col-5 offset-7">
+      <p>Data credit: All data provided by Clusterbusters datasheets<p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-7">
+      <h1>Search Results</h1>
 
 {% for provider in providers %}
     <section
@@ -37,12 +45,13 @@
       {% endif %}
     </section>
 {% endfor %}
+<br>
+<a href="/providers" class="button special">Back to all providers</a><br><br>
 
 
-  <ul>
-    <li><a href="/providers">View all providers</a></li>
-
-  </ul>
+    </div>
+  </div>
+</div>
   <script
   src="http://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="

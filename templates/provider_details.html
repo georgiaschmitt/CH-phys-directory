@@ -9,6 +9,16 @@
 </section>
 
 <div id="map"></div>
+
+<div class="container">
+  <div class="row">
+    <div class="col-5 offset-7">
+      <p>Data credit: All data provided by Clusterbusters datasheets<p>
+    </div>
+  </div>
+  <div class="row">
+    <div class="col-7">
+
 <section
       class="provider"
       data-location-id="{{ provider.location.location_id }}"
@@ -27,17 +37,21 @@
 
   {% if "user_id" in session %}
     {% if provider in user.favorites %}
-      <button type="button" class='bookmark button small' id="{{ provider.physician_id }}" disabled='disabled'>Bookmarked</button>
+      <button type="button" class='bookmark button' id="{{ provider.physician_id }}" disabled='disabled'>Bookmarked</button>
     {% else %}
-      <button type="button" class='bookmark button small' id="{{ provider.physician_id }}">Add to bookmarks</button>
+      <button type="button" class='bookmark button' id="{{ provider.physician_id }}">Add to bookmarks</button>
     {% endif %}
   {% else %}
-    <button type="button" class='bookmark button small' id="{{ provider.physician_id }}" disabled='disabled'>Add to bookmarks</button>
+    <button type="button" class='bookmark button' id="{{ provider.physician_id }}" disabled='disabled'>Add to bookmarks</button>
   {% endif %}
 
 </section>
-  <br><br>
-<a href="/providers">Back to all providers</a>
+  <br>
+<a href="/providers" class="button special">View all providers</a><br><br>
+
+    </div>
+  </div>
+</div>
 <script
   src="http://code.jquery.com/jquery-3.5.1.js"
   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="

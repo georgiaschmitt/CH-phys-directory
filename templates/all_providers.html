@@ -30,7 +30,7 @@
          
         {% if "user_id" in session %}
           {% if provider in user.favorites %}
-        <button type="button" class='bookmark button small' id="{{ provider.physician_id }}" disabled='disabled'>Bookmarked</button>
+        <button type="button" class='bookmark button small' id="{{ provider.physician_id }}" disabled='disabled'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Bookmarked&nbsp;&nbsp;&nbsp;&nbsp;</button>
           {% else %}
         <button type="button" class='bookmark button small' id="{{ provider.physician_id }}">Add to bookmarks</button>
           {% endif %}

@@ -63,7 +63,7 @@ $('.bookmark').on('click', (evt) => {
     };
 
     button.prop('disabled', true);
-    button.html("Bookmarked")
+    button.html("&nbsp;&nbsp;&nbsp;&nbsp;Bookmarked&nbsp;&nbsp;&nbsp;&nbsp;")
 
     $.post('/new-bookmark', formInputs, (res) => {
     });
